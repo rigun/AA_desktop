@@ -112,5 +112,45 @@ namespace AtmaAuto.Boundary
             f1.Show();
             this.Hide();
         }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDashboard_Click_1(object sender, EventArgs e)
+        {
+            Dashboard dsh = new Dashboard();
+            dsh.Show();
+            this.Hide();
+        }
+
+        private void btnCabang_Click_1(object sender, EventArgs e)
+        {
+            FormCabang foc = new FormCabang();
+            foc.Show();
+            this.Hide();
+        }
+
+        private void btnSupplier_Click_1(object sender, EventArgs e)
+        {
+            FormSupplier fos = new FormSupplier();
+            fos.Show();
+            this.Hide();
+        }
+
+        private void btnSparepart_Click_1(object sender, EventArgs e)
+        {
+            FormSparepart fosp = new FormSparepart();
+            fosp.Show();
+            this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Show();
+            this.Hide();
+        }
     }
 }
