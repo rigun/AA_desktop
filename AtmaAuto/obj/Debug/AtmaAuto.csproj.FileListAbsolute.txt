@@ -33,10 +33,6 @@ G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\Atma
 G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Form1.resources
 G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormSparepart.resources
 G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormSupplier.resources
-G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.UC_Cabang.resources
-G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.UC_Kendaraan.resources
-G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.UC_Layanan.resources
-G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.UC_Pegawai.resources
 G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.FormLayanan.resources
 G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Properties.Resources.resources
 G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.csproj.GenerateResource.cache

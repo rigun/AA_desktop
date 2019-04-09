@@ -3,137 +3,99 @@ using System.Net;
 using System.IO;
 using System.Threading.Tasks;
 using System.Net.Http;
+using Newtonsoft.Json;
+using System.Text;
+using AtmaAuto.Entity;
+using System.Net.Http.Headers;
 
 namespace AtmaAuto.Control
 {
-    public class UserData1
-    {
-        public string cabang { get; set; }
-    }
 
     class CabangControl
     {
-        public string postJson { get; set; }
-
-        public string tambahCabang()
-            {
-                string strResponseValue = string.Empty;
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://api1.thekingcorp.org/branch");
-                request.Method = "Post";
-                request.ContentType = "application/json";
-
-                using (StreamWriter swJsonpayload = new StreamWriter(request.GetRequestStream()))
-                {
-                    swJsonpayload.Write(postJson);
-                    swJsonpayload.Close();
-                }
-                HttpWebResponse response = null;
-                try
-                {
-                    response = (HttpWebResponse)request.GetResponse();
-                    if (response.GetResponseStream() != null)
-                    {
-                        using (StreamReader reader = new StreamReader(response.GetResponseStream()))
-                        {
-                            strResponseValue = reader.ReadToEnd();
-                            return strResponseValue.ToString();
-                        }
-                    }
-                }
-                catch (Exception e)
-                {
-                    strResponseValue = e.Message.ToString();
-                }
-                return "error";
-            }
-
-        public string hapusCabang()
-        {
-            string strResponseValue = string.Empty;
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://api1.thekingcorp.org/branch");
-            request.Method = "Delete";
-            request.ContentType = "application/json";
-
-            using (StreamWriter swJsonpayload = new StreamWriter(request.GetRequestStream()))
-            {
-                swJsonpayload.Write(postJson);
-                swJsonpayload.Close();
-            }
-            HttpWebResponse response = null;
-            try
-            {
-                response = (HttpWebResponse)request.GetResponse();
-                if (response.GetResponseStream() != null)
-                {
-                    using (StreamReader reader = new StreamReader(response.GetResponseStream()))
-                    {
-                        strResponseValue = reader.ReadToEnd();
-                        return strResponseValue.ToString();
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                strResponseValue = e.Message.ToString();
-            }
-            return "error";
-        }
-
+        public string token { get; set; }
+        private string url = "http://api1.thekingcorp.org/branch";
         public string getData()
         {
-            var t = Task.Run(() => GetURI(new Uri("http://api1.thekingcorp.org/branch")));
+            var t = Task.Run(() => GetURI(new Uri(this.url), this.token));
             t.Wait();
-
-            Console.WriteLine(t.Result);
-            Console.ReadLine();
             return t.Result;
         }
-        static async Task<string> GetURI(Uri u)
+        public string deleteData(int id)
+        {
+            string deleteUrl = String.Concat(this.url, "/", id);
+            var t = Task.Run(() => DeleteUri(new Uri(deleteUrl), this.token));
+            t.Wait();
+            return t.Result;
+        }
+        public string sendData(Cabang cabang)
+        {
+            var payload = JsonConvert.SerializeObject(cabang);
+
+            Uri u = new Uri(this.url);
+            HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");
+            var t = Task.Run(() => PostURI(u, c, this.token));
+            t.Wait();
+            return t.Result;
+        }
+        static async Task<string> PostURI(Uri u, HttpContent c, string token)
         {
             var response = string.Empty;
             using (var client = new HttpClient())
             {
-                HttpResponseMessage result = await client.GetAsync(u);
-                if (result.IsSuccessStatusCode)
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                try
                 {
+                    HttpResponseMessage result = await client.PostAsync(u, c);
                     response = await result.Content.ReadAsStringAsync();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                    response = "Cabang gagal dimasukkan";
                 }
             }
             return response;
         }
-
-        public string updateCabang()
+        static async Task<string> GetURI(Uri u, string token)
         {
-            string strResponseValue = string.Empty;
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://api1.thekingcorp.org/branch");
-            request.Method = "Post";
-            request.ContentType = "application/json";
-
-            using (StreamWriter swJsonpayload = new StreamWriter(request.GetRequestStream()))
+            var response = string.Empty;
+            using (var client = new HttpClient())
             {
-                swJsonpayload.Write(postJson);
-                swJsonpayload.Close();
-            }
-            HttpWebResponse response = null;
-            try
-            {
-                response = (HttpWebResponse)request.GetResponse();
-                if (response.GetResponseStream() != null)
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                try
                 {
-                    using (StreamReader reader = new StreamReader(response.GetResponseStream()))
-                    {
-                        strResponseValue = reader.ReadToEnd();
-                        return strResponseValue.ToString();
-                    }
+                    HttpResponseMessage result = await client.GetAsync(u);
+                    response = await result.Content.ReadAsStringAsync();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                    response = "Cabang gagal dimasukkan";
                 }
             }
-            catch (Exception e)
-            {
-                strResponseValue = e.Message.ToString();
-            }
-            return "error";
+            return response;
         }
+        static async Task<string> DeleteUri(Uri u, string token)
+        {
+            var response = string.Empty;
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-  
+                try
+                {
+                    HttpResponseMessage result = await client.DeleteAsync(u);
+                    response = await result.Content.ReadAsStringAsync();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                    response = "Cabang gagal dihapus";
+                }
+            }
+            return response;
+        }
     }
 }

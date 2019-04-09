@@ -4,22 +4,60 @@ using AtmaAuto.Control;
 using static AtmaAuto.Control.CabangControl;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Data;
+using AtmaAuto.Entity;
 
 namespace AtmaAuto.Boundary
 {
     public partial class FormCabang : Form
     {
         private dynamic cabangs { get; set; }
+        private int setTableStatus = 0;
+        CabangControl cabangControl = new CabangControl();
+
         public FormCabang()
         {
             InitializeComponent();
-            CabangControl cabangControl = new CabangControl();
+            FileHandling fh = new FileHandling();
+            this.cabangControl.token = fh.ReadData(); 
             string responseContent = cabangControl.getData();
-            this.cabangs = JObject.Parse(responseContent);
+            this.cabangs = JArray.Parse(responseContent.ToString());
+            this.setTable();
         }
 
         CabangControl CC = new CabangControl();
 
+        public void setTable()
+        {
+            DataTable dt = new DataTable();
+            dt.Clear();
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Dibuat Pada");
+
+            foreach (dynamic cabang in this.cabangs)
+            {
+                DataRow row = dt.NewRow();
+                row["Name"] = cabang.name;
+                row["Dibuat Pada"] = cabang.created_at;
+                dt.Rows.Add(row);
+                
+            }
+            
+
+            dataGridView1.DataSource = dt;
+            if(this.setTableStatus == 0)
+            {
+                DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+                dataGridView1.Columns.Add(btn);
+                btn.HeaderText = "Pengaturan";
+                btn.Text = "Hapus";
+                btn.Name = "btn";
+                btn.UseColumnTextForButtonValue = true;
+                this.setTableStatus = 1;
+            }
+
+        }
+        
         private void btnTambah_Click(object sender, EventArgs e)
         {
           
@@ -141,11 +179,29 @@ namespace AtmaAuto.Boundary
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
+            MessageBox.Show((e.RowIndex + 1) + "Row  "+ (e.ColumnIndex + 1) + "  Column button clicked ");
         }
 
         private void FormCabang_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnTambah_Click_1(object sender, EventArgs e)
+        {
+            if(txtNamaCabang.Text != null && txtNamaCabang.Text != "")
+            {
+                Cabang cabang = new Cabang();
+                cabang.name = txtNamaCabang.Text;
+                string success = cabangControl.sendData(cabang);
+                dynamic json = JObject.Parse(success);
+                if(success != null)
+                {
+                    string responseContent = cabangControl.getData();
+                    this.cabangs = JArray.Parse(responseContent.ToString());
+                    this.setTable();
+                }
+            }
 
         }
     }

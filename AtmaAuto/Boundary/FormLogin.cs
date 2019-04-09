@@ -71,12 +71,10 @@ namespace AtmaAuto
         {
 
         }
-<<<<<<< HEAD
         public void hideForm()
         {
             this.Hide();
         }
-=======
->>>>>>> d32b456f935d4812f875098def84d3e7cd0c5cdb
+
     }
 }
