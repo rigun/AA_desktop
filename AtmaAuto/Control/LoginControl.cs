@@ -1,6 +1,12 @@
 ﻿using System;
 using System.Net;
 using System.IO;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.Text;
+using Newtonsoft.Json.Linq;
 
 namespace AtmaAuto.Control
 {
@@ -12,41 +18,42 @@ namespace AtmaAuto.Control
 
     class LoginControl
     {
-        public string postJson { get; set; }
-
-        public string cekLogin()
+        public string cekLogin(string email, string password)
         {
-            string strResponseValue = string.Empty;
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://api1.thekingcorp.org/auth/login");
-            request.Method = "Post";
-            request.ContentType = "application/json";
+            if(email == null || password == null)
+            {
+                return "Mohon untuk mengisi data terlebih dahulu";
+            }
+            UserData userData = new UserData();
+            userData.email = email;
+            userData.password = password;
 
-            using (StreamWriter swJsonpayload = new StreamWriter(request.GetRequestStream()))
-            {
-                swJsonpayload.Write(postJson);
-                swJsonpayload.Close();
-            }
-                HttpWebResponse response = null;
-            try
-            {
-                response = (HttpWebResponse)request.GetResponse();
-                if(response.GetResponseStream() != null)
-                {
-                    using (StreamReader reader = new StreamReader(response.GetResponseStream()))
-                    {
-                        strResponseValue = reader.ReadToEnd();
-                        return strResponseValue.ToString();
-                    }
-                }
-            }catch(Exception e)
-            {
-                strResponseValue = e.Message.ToString();
-            }
-            return "error";
+
+            var payload = JsonConvert.SerializeObject(userData);
+
+            Uri u = new Uri("http://api1.thekingcorp.org/auth/login");
+
+            HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");
+            var t = Task.Run(() => PostURI(u, c));
+            t.Wait();
+            return t.Result;
+
         }
-
-        public void upPass(string acc, string lama, string baru)
+        static async Task<string> PostURI(Uri u, HttpContent c)
         {
+            var response = string.Empty;
+            using (var client = new HttpClient())
+            {
+                try
+                {
+                    HttpResponseMessage result = await client.PostAsync(u, c);
+                    response = await result.Content.ReadAsStringAsync();
+                }catch(Exception ex)
+                {
+                    response = "Pengguna tidak diketahui";
+                }
+            }
+            return response;
         }
     }
 }

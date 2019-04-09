@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using AtmaAuto.Control;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace AtmaAuto
 {
@@ -26,25 +27,10 @@ namespace AtmaAuto
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            UserData userData = new UserData();
-            userData.email = txtUsername.Text;
-            userData.password = txtPassword.Text;
-            
-
-            String Json = JsonConvert.SerializeObject(userData);
-            LC.postJson = Json;
-            if (LC.cekLogin() != "error")
-            {
-            
-                
-                MessageBox.Show(LC.cekLogin(), "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            }
-            else
-            {
-                MessageBox.Show("Username atau Password salah !", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            
+            string responseContent = LC.cekLogin(txtUsername.Text, txtPassword.Text);
+            dynamic json = JObject.Parse(responseContent);
+            string token= json.access_token;
+            MessageBox.Show(token, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
         }
 

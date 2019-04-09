@@ -21,3 +21,26 @@ F:\AA ATMAJAYA SEMESTER 6\P3L\AA TCP 1\AtmaAuto\AtmaAuto\AtmaAuto\obj\Debug\Atma
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA TCP 1\AtmaAuto\AtmaAuto\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormSparepart.resources
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA TCP 1\AtmaAuto\AtmaAuto\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormSupplier.resources
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA TCP 1\AtmaAuto\AtmaAuto\AtmaAuto\obj\Debug\AtmaAuto.FormLayanan.resources
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\bin\Debug\AtmaAuto.exe.config
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\bin\Debug\AtmaAuto.exe
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\bin\Debug\AtmaAuto.pdb
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\bin\Debug\Newtonsoft.Json.dll
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\bin\Debug\Newtonsoft.Json.pdb
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\bin\Debug\Newtonsoft.Json.xml
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.csprojAssemblyReference.cache
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.Dashboard.resources
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormCabang.resources
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Form1.resources
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormSparepart.resources
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormSupplier.resources
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.UC_Cabang.resources
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.UC_Kendaraan.resources
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.UC_Layanan.resources
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.UC_Pegawai.resources
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.FormLayanan.resources
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Properties.Resources.resources
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.csproj.GenerateResource.cache
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.csproj.CoreCompileInputs.cache
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.csproj.CopyComplete
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.exe
+G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.pdb
