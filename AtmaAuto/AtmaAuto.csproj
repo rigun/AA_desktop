@@ -91,6 +91,12 @@
     <Compile Include="Boundary\FormPegawai.Designer.cs">
       <DependentUpon>FormPegawai.cs</DependentUpon>
     </Compile>
+    <Compile Include="Boundary\FormPembayaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boundary\FormPembayaran.Designer.cs">
+      <DependentUpon>FormPembayaran.cs</DependentUpon>
+    </Compile>
     <Compile Include="Boundary\FormSparepart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,7 @@
     <Compile Include="Control\LoginControl.cs" />
     <Compile Include="Control\SIAAControl.cs" />
     <Compile Include="Entity\Cabang.cs" />
+    <Compile Include="Entity\FileHandling.cs" />
     <Compile Include="Entity\Kendaraan.cs" />
     <Compile Include="Entity\Layanan.cs" />
     <Compile Include="Entity\Login.cs" />
@@ -151,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Boundary\FormCabang.resx">
       <DependentUpon>FormCabang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boundary\FormKendaraan.resx">
+      <DependentUpon>FormKendaraan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Boundary\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

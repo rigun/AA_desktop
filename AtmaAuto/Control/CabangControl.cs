@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Net;
 using System.IO;
+using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace AtmaAuto.Control
 {
@@ -77,36 +79,27 @@ namespace AtmaAuto.Control
             return "error";
         }
 
-        public string tampilCabang()
+        public string getData()
         {
-            string strResponseValue = string.Empty;
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://api1.thekingcorp.org/branch");
-            request.Method = "show";
-            request.ContentType = "application/json";
+            var t = Task.Run(() => GetURI(new Uri("http://api1.thekingcorp.org/branch")));
+            t.Wait();
 
-            using (StreamWriter swJsonpayload = new StreamWriter(request.GetRequestStream()))
+            Console.WriteLine(t.Result);
+            Console.ReadLine();
+            return t.Result;
+        }
+        static async Task<string> GetURI(Uri u)
+        {
+            var response = string.Empty;
+            using (var client = new HttpClient())
             {
-                swJsonpayload.Write(postJson);
-                swJsonpayload.Close();
-            }
-            HttpWebResponse response = null;
-            try
-            {
-                response = (HttpWebResponse)request.GetResponse();
-                if (response.GetResponseStream() != null)
+                HttpResponseMessage result = await client.GetAsync(u);
+                if (result.IsSuccessStatusCode)
                 {
-                    using (StreamReader reader = new StreamReader(response.GetResponseStream()))
-                    {
-                        strResponseValue = reader.ReadToEnd();
-                        return strResponseValue.ToString();
-                    }
+                    response = await result.Content.ReadAsStringAsync();
                 }
             }
-            catch (Exception e)
-            {
-                strResponseValue = e.Message.ToString();
-            }
-            return "error";
+            return response;
         }
 
         public string updateCabang()

@@ -28,148 +28,175 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSparepart = new System.Windows.Forms.Button();
             this.btnCabang = new System.Windows.Forms.Button();
             this.btnLayanan = new System.Windows.Forms.Button();
             this.btnKendaraan = new System.Windows.Forms.Button();
-            this.btnSparepartCabang = new System.Windows.Forms.Button();
-            this.btnPegawai = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnLaporan = new System.Windows.Forms.Button();
-            this.btnKeluar = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.btnPembayaran = new System.Windows.Forms.Button();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // btnLogout
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.groupBox1.Controls.Add(this.btnKeluar);
-            this.groupBox1.Controls.Add(this.btnLaporan);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.btnSparepartCabang);
-            this.groupBox1.Controls.Add(this.btnPegawai);
-            this.groupBox1.Controls.Add(this.btnKendaraan);
-            this.groupBox1.Controls.Add(this.btnLayanan);
-            this.groupBox1.Controls.Add(this.btnCabang);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(388, 424);
-            this.groupBox1.TabIndex = 18;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Dashboard ";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.btnLogout.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLogout.Location = new System.Drawing.Point(704, 357);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(111, 57);
+            this.btnLogout.TabIndex = 13;
+            this.btnLogout.Text = "Keluar";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Location = new System.Drawing.Point(227, 15);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(588, 100);
+            this.panel3.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label3.Location = new System.Drawing.Point(23, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(543, 43);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Selamat Datang di Atma Auto";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.btnLaporan);
+            this.panel1.Controls.Add(this.btnPembayaran);
+            this.panel1.Controls.Add(this.btnKendaraan);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnLayanan);
+            this.panel1.Controls.Add(this.btnSparepart);
+            this.panel1.Controls.Add(this.btnCabang);
+            this.panel1.Location = new System.Drawing.Point(-13, -4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(234, 456);
+            this.panel1.TabIndex = 11;
+            // 
+            // btnSparepart
+            // 
+            this.btnSparepart.BackColor = System.Drawing.Color.DarkGray;
+            this.btnSparepart.Location = new System.Drawing.Point(64, 247);
+            this.btnSparepart.Name = "btnSparepart";
+            this.btnSparepart.Size = new System.Drawing.Size(111, 51);
+            this.btnSparepart.TabIndex = 3;
+            this.btnSparepart.Text = "Sparepart";
+            this.btnSparepart.UseVisualStyleBackColor = false;
+            this.btnSparepart.Click += new System.EventHandler(this.btnSparepart_Click_1);
             // 
             // btnCabang
             // 
-            this.btnCabang.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCabang.Location = new System.Drawing.Point(21, 39);
+            this.btnCabang.BackColor = System.Drawing.Color.DarkGray;
+            this.btnCabang.Location = new System.Drawing.Point(64, 19);
             this.btnCabang.Name = "btnCabang";
-            this.btnCabang.Size = new System.Drawing.Size(152, 88);
+            this.btnCabang.Size = new System.Drawing.Size(111, 51);
             this.btnCabang.TabIndex = 1;
             this.btnCabang.Text = "Cabang";
             this.btnCabang.UseVisualStyleBackColor = false;
-            this.btnCabang.Click += new System.EventHandler(this.btnCabang_Click);
+            this.btnCabang.Click += new System.EventHandler(this.btnCabang_Click_1);
             // 
             // btnLayanan
             // 
-            this.btnLayanan.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLayanan.Location = new System.Drawing.Point(21, 133);
+            this.btnLayanan.BackColor = System.Drawing.Color.DarkGray;
+            this.btnLayanan.Location = new System.Drawing.Point(64, 76);
             this.btnLayanan.Name = "btnLayanan";
-            this.btnLayanan.Size = new System.Drawing.Size(152, 88);
-            this.btnLayanan.TabIndex = 15;
+            this.btnLayanan.Size = new System.Drawing.Size(111, 51);
+            this.btnLayanan.TabIndex = 10;
             this.btnLayanan.Text = "Layanan";
             this.btnLayanan.UseVisualStyleBackColor = false;
-            this.btnLayanan.Click += new System.EventHandler(this.btnLayanan_Click);
+            this.btnLayanan.Click += new System.EventHandler(this.btnLayanan_Click_1);
             // 
             // btnKendaraan
             // 
-            this.btnKendaraan.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnKendaraan.Location = new System.Drawing.Point(21, 227);
+            this.btnKendaraan.BackColor = System.Drawing.Color.DarkGray;
+            this.btnKendaraan.Location = new System.Drawing.Point(64, 133);
             this.btnKendaraan.Name = "btnKendaraan";
-            this.btnKendaraan.Size = new System.Drawing.Size(152, 88);
-            this.btnKendaraan.TabIndex = 16;
+            this.btnKendaraan.Size = new System.Drawing.Size(111, 51);
+            this.btnKendaraan.TabIndex = 11;
             this.btnKendaraan.Text = "Kendaraan";
             this.btnKendaraan.UseVisualStyleBackColor = false;
-            this.btnKendaraan.Click += new System.EventHandler(this.btnKendaraan_Click);
-            // 
-            // btnSparepartCabang
-            // 
-            this.btnSparepartCabang.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSparepartCabang.Location = new System.Drawing.Point(211, 133);
-            this.btnSparepartCabang.Name = "btnSparepartCabang";
-            this.btnSparepartCabang.Size = new System.Drawing.Size(152, 88);
-            this.btnSparepartCabang.TabIndex = 18;
-            this.btnSparepartCabang.Text = "Sparepart Cabang";
-            this.btnSparepartCabang.UseVisualStyleBackColor = false;
-            this.btnSparepartCabang.Click += new System.EventHandler(this.btnSparepartCabang_Click);
-            // 
-            // btnPegawai
-            // 
-            this.btnPegawai.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnPegawai.Location = new System.Drawing.Point(211, 39);
-            this.btnPegawai.Name = "btnPegawai";
-            this.btnPegawai.Size = new System.Drawing.Size(152, 88);
-            this.btnPegawai.TabIndex = 17;
-            this.btnPegawai.Text = "Pegawai";
-            this.btnPegawai.UseVisualStyleBackColor = false;
-            this.btnPegawai.Click += new System.EventHandler(this.btnPegawai_Click);
+            this.btnKendaraan.Click += new System.EventHandler(this.btnKendaraan_Click_1);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(211, 227);
+            this.button1.BackColor = System.Drawing.Color.DarkGray;
+            this.button1.Location = new System.Drawing.Point(64, 190);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 88);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Orderan";
+            this.button1.Size = new System.Drawing.Size(111, 51);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Pegawai";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnLaporan
             // 
-            this.btnLaporan.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLaporan.Location = new System.Drawing.Point(21, 321);
+            this.btnLaporan.BackColor = System.Drawing.Color.DarkGray;
+            this.btnLaporan.Location = new System.Drawing.Point(64, 361);
             this.btnLaporan.Name = "btnLaporan";
-            this.btnLaporan.Size = new System.Drawing.Size(152, 88);
-            this.btnLaporan.TabIndex = 20;
+            this.btnLaporan.Size = new System.Drawing.Size(111, 51);
+            this.btnLaporan.TabIndex = 14;
             this.btnLaporan.Text = "Laporan";
             this.btnLaporan.UseVisualStyleBackColor = false;
-            this.btnLaporan.Click += new System.EventHandler(this.btnLaporan_Click);
+            this.btnLaporan.Click += new System.EventHandler(this.btnLaporan_Click_1);
             // 
-            // btnKeluar
+            // btnPembayaran
             // 
-            this.btnKeluar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnKeluar.Location = new System.Drawing.Point(211, 321);
-            this.btnKeluar.Name = "btnKeluar";
-            this.btnKeluar.Size = new System.Drawing.Size(152, 88);
-            this.btnKeluar.TabIndex = 21;
-            this.btnKeluar.Text = "Keluar";
-            this.btnKeluar.UseVisualStyleBackColor = false;
-            this.btnKeluar.Click += new System.EventHandler(this.btnKeluar_Click);
+            this.btnPembayaran.BackColor = System.Drawing.Color.DarkGray;
+            this.btnPembayaran.Location = new System.Drawing.Point(64, 304);
+            this.btnPembayaran.Name = "btnPembayaran";
+            this.btnPembayaran.Size = new System.Drawing.Size(111, 51);
+            this.btnPembayaran.TabIndex = 13;
+            this.btnPembayaran.Text = "Pembayaran";
+            this.btnPembayaran.UseVisualStyleBackColor = false;
+            this.btnPembayaran.Click += new System.EventHandler(this.btnPembayaran_Click);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 448);
-            this.Controls.Add(this.groupBox1);
+            this.BackColor = System.Drawing.Color.DarkGray;
+            this.ClientSize = new System.Drawing.Size(821, 418);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel1);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
-            this.groupBox1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.Dashboard_Load);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnSparepart;
         private System.Windows.Forms.Button btnCabang;
-        private System.Windows.Forms.Button btnSparepartCabang;
         private System.Windows.Forms.Button btnKendaraan;
         private System.Windows.Forms.Button btnLayanan;
-        private System.Windows.Forms.Button btnKeluar;
         private System.Windows.Forms.Button btnLaporan;
+        private System.Windows.Forms.Button btnPembayaran;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnPegawai;
     }
 }
