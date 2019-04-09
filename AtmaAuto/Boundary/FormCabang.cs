@@ -4,6 +4,7 @@ using AtmaAuto.Control;
 using static AtmaAuto.Control.CabangControl;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using AtmaAuto.Entity;
 
 namespace AtmaAuto.Boundary
 {
@@ -13,8 +14,8 @@ namespace AtmaAuto.Boundary
         public FormCabang()
         {
             InitializeComponent();
-            CabangControl cabangControl = new CabangControl();
-            string responseContent = cabangControl.getData();
+            CabangControl CC  = new CabangControl();
+            string responseContent = CC.getData();
             this.cabangs = JObject.Parse(responseContent);
         }
 
@@ -127,7 +128,11 @@ namespace AtmaAuto.Boundary
             if (MessageBox.Show("Ingin Keluar Dari Aplikasi Ini ???", "Konfirmasi",
             MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Application.Exit();
+                FileHandling wr = new FileHandling();
+                wr.WriteData("");
+                Form1 f1 = new Form1();
+                f1.Show();
+                this.Hide();
             }
         }
 
@@ -141,11 +146,83 @@ namespace AtmaAuto.Boundary
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
+            string responseContent = CC.getData();
+            dynamic json = JObject.Parse(responseContent);
+            string token = json.access_token;
+            if (token != null)
+            {
+                FileHandling wr = new FileHandling();
+                wr.WriteData(token);
+                Dashboard dsh = new Dashboard();
+                dsh.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void FormCabang_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnTambah_Click_1(object sender, EventArgs e)
+        {
+            string responseContent = CC.tambahCabang();
+            dynamic json = JObject.Parse(responseContent);
+            string token = json.access_token;
+            if (token != null)
+            {
+                FileHandling wr = new FileHandling();
+                wr.WriteData(token);
+                Dashboard dsh = new Dashboard();
+                dsh.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string responseContent = CC.updateCabang();
+            dynamic json = JObject.Parse(responseContent);
+            string token = json.access_token;
+            if (token != null)
+            {
+                FileHandling wr = new FileHandling();
+                wr.WriteData(token);
+                Dashboard dsh = new Dashboard();
+                dsh.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string responseContent = CC.hapusCabang();
+            dynamic json = JObject.Parse(responseContent);
+            string token = json.access_token;
+            if (token != null)
+            {
+                FileHandling wr = new FileHandling();
+                wr.WriteData(token);
+                Dashboard dsh = new Dashboard();
+                dsh.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
     }

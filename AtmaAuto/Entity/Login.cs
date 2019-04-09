@@ -8,24 +8,7 @@ namespace AtmaAuto.Entity
 {
     class Login
     {
-        string username, password;
-
-        public Login(string username, string password)
-        {
-            this.password = password;
-            this.username = username;
-        }
-
-        public string Password
-        {
-            get { return password; }
-            set { password = value; }
-        }
-
-        public string Username
-        {
-            get { return username; }
-            set { username = value; }
-        }
+        public string email { get; set; }
+        public string password { get; set; }
     }
 }

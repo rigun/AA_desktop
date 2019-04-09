@@ -8,5 +8,7 @@ namespace AtmaAuto.Entity
 {
     class Kendaraan
     {
+        public string merk { get; set; }
+        public string type { get; set; }
     }
 }

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using AtmaAuto.Boundary;
 using AtmaAuto.Control;
+using AtmaAuto.Entity;
+using Newtonsoft.Json.Linq;
 
 namespace AtmaAuto
 {
@@ -111,9 +113,13 @@ namespace AtmaAuto
         private void btnLogout_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Ingin Keluar Dari Aplikasi Ini ???", "Konfirmasi",
-            MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+           MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Application.Exit();
+                FileHandling wr = new FileHandling();
+                wr.WriteData("");
+                Form1 f1 = new Form1();
+                f1.Show();
+                this.Hide();
             }
         }
 
@@ -123,6 +129,63 @@ namespace AtmaAuto
             dsh.Show();
             this.Hide();
 
+        }
+
+        private void btnTambah_Click_2(object sender, EventArgs e)
+        {
+            string responseContent = LC.tambahLayanan();
+            dynamic json = JObject.Parse(responseContent);
+            string token = json.access_token;
+            if (token != null)
+            {
+                FileHandling wr = new FileHandling();
+                wr.WriteData(token);
+                Dashboard dsh = new Dashboard();
+                dsh.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string responseContent = LC.updateLayanan();
+            dynamic json = JObject.Parse(responseContent);
+            string token = json.access_token;
+            if (token != null)
+            {
+                FileHandling wr = new FileHandling();
+                wr.WriteData(token);
+                Dashboard dsh = new Dashboard();
+                dsh.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string responseContent = LC.hapusLayanan();
+            dynamic json = JObject.Parse(responseContent);
+            string token = json.access_token;
+            if (token != null)
+            {
+                FileHandling wr = new FileHandling();
+                wr.WriteData(token);
+                Dashboard dsh = new Dashboard();
+                dsh.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

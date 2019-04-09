@@ -73,6 +73,7 @@
             this.btnTambah.TabIndex = 36;
             this.btnTambah.Text = "Tambah";
             this.btnTambah.UseVisualStyleBackColor = false;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
             // label1
             // 
