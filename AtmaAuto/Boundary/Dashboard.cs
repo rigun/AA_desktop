@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AtmaAuto.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace AtmaAuto.Boundary
 {
     public partial class Dashboard : Form
     {
+        private string str { get; set; }
         public Dashboard()
         {
             InitializeComponent();
+            FileHandling fh = new FileHandling();
+            this.str = fh.ReadData();
         }
 
         private void btnCabang_Click(object sender, EventArgs e)
@@ -146,6 +150,8 @@ namespace AtmaAuto.Boundary
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            FileHandling wr = new FileHandling();
+            wr.WriteData("");
             Form1 f1 = new Form1();
             f1.Show();
             this.Hide();

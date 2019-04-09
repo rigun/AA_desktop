@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AtmaAuto.Boundary;
+using AtmaAuto.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,24 @@ namespace AtmaAuto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            FileHandling fh = new FileHandling();
+            string str = null;
+            try
+            {
+                str = fh.ReadData();
+            }catch(Exception ex)
+            {
+                str = null;
+            }
+            if (str != null && str != "")
+            {
+                Application.Run(new Dashboard());
+            }
+            else
+            {
+                Application.Run(new Form1());
+
+            }
         }
     }
 }

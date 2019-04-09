@@ -3,14 +3,19 @@ using System.Windows.Forms;
 using AtmaAuto.Control;
 using static AtmaAuto.Control.CabangControl;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace AtmaAuto.Boundary
 {
     public partial class FormCabang : Form
     {
+        private dynamic cabangs { get; set; }
         public FormCabang()
         {
             InitializeComponent();
+            CabangControl cabangControl = new CabangControl();
+            string responseContent = cabangControl.getData();
+            this.cabangs = JObject.Parse(responseContent);
         }
 
         CabangControl CC = new CabangControl();
@@ -131,6 +136,16 @@ namespace AtmaAuto.Boundary
             Dashboard dsh = new Dashboard();
             dsh.Show();
             this.Hide();
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void FormCabang_Load(object sender, EventArgs e)
+        {
 
         }
     }

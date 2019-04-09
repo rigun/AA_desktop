@@ -115,6 +115,7 @@
     <Compile Include="Control\LoginControl.cs" />
     <Compile Include="Control\SIAAControl.cs" />
     <Compile Include="Entity\Cabang.cs" />
+    <Compile Include="Entity\FileHandling.cs" />
     <Compile Include="Entity\Kendaraan.cs" />
     <Compile Include="Entity\Layanan.cs" />
     <Compile Include="Entity\Login.cs" />
