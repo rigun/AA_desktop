@@ -52,7 +52,7 @@ namespace AtmaAuto
             dynamic json = JObject.Parse(responseContent);
             string token = json.access_token;
             MessageBox.Show(token, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+            
         }
 
         private void btnBatal_Click_1(object sender, EventArgs e)

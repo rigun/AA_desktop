@@ -33,12 +33,13 @@
             this.btnTambah = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtLayanan = new System.Windows.Forms.MaskedTextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtBiaya = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtLayanan = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -91,16 +92,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(505, 180);
             this.dataGridView1.TabIndex = 27;
             // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnLogout.Location = new System.Drawing.Point(722, 397);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(104, 39);
-            this.btnLogout.TabIndex = 26;
-            this.btnLogout.Text = "Dashboard";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
@@ -112,24 +103,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(317, 470);
             this.panel1.TabIndex = 25;
-            // 
-            // txtLayanan
-            // 
-            this.txtLayanan.Location = new System.Drawing.Point(143, 104);
-            this.txtLayanan.Name = "txtLayanan";
-            this.txtLayanan.Size = new System.Drawing.Size(159, 20);
-            this.txtLayanan.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(26, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Nama Layanan\r\n";
             // 
             // txtBiaya
             // 
@@ -149,18 +122,59 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Biaya";
             // 
+            // txtLayanan
+            // 
+            this.txtLayanan.Location = new System.Drawing.Point(143, 104);
+            this.txtLayanan.Name = "txtLayanan";
+            this.txtLayanan.Size = new System.Drawing.Size(159, 20);
+            this.txtLayanan.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(26, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Nama Layanan\r\n";
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.Location = new System.Drawing.Point(630, 398);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(96, 39);
+            this.btnBack.TabIndex = 33;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLogout.Location = new System.Drawing.Point(732, 398);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(96, 39);
+            this.btnLogout.TabIndex = 32;
+            this.btnLogout.Text = "Keluar";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click_1);
+            // 
             // FormLayanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(835, 449);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.panel1);
             this.Name = "FormLayanan";
             this.Text = "FormLayanan";
@@ -179,11 +193,12 @@
         private System.Windows.Forms.Button btnTambah;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MaskedTextBox txtLayanan;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox txtBiaya;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

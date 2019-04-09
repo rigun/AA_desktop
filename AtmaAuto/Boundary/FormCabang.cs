@@ -119,9 +119,19 @@ namespace AtmaAuto.Boundary
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Ingin Keluar Dari Aplikasi Ini ???", "Konfirmasi",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
             Dashboard dsh = new Dashboard();
             dsh.Show();
             this.Hide();
+
         }
     }
 }

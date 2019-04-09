@@ -56,10 +56,6 @@ F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.Fo
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.Form1.resources
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormSparepart.resources
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormSupplier.resources
-F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.UC_Cabang.resources
-F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.UC_Kendaraan.resources
-F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.UC_Layanan.resources
-F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.UC_Pegawai.resources
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.FormLayanan.resources
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.Properties.Resources.resources
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.csproj.GenerateResource.cache
