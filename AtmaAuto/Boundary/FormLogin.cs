@@ -45,7 +45,6 @@ namespace AtmaAuto
             string responseContent = LC.cekLogin(txtUsername.Text, txtPassword.Text);
             dynamic json = JObject.Parse(responseContent);
             string token = json.access_token;
-<<<<<<< HEAD
             if(token != null)
             {
                 FileHandling wr = new FileHandling();
@@ -59,10 +58,6 @@ namespace AtmaAuto
                 MessageBox.Show("Email atau password salah", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-=======
-            MessageBox.Show(token, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            
->>>>>>> d32b456f935d4812f875098def84d3e7cd0c5cdb
         }
 
         private void btnBatal_Click_1(object sender, EventArgs e)
