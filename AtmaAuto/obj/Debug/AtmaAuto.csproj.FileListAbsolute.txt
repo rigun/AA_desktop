@@ -67,3 +67,4 @@ F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.csproj.Core
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.csproj.CopyComplete
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.exe
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.pdb
+F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormKendaraan.resources

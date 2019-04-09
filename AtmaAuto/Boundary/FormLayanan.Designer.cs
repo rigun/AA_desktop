@@ -37,13 +37,17 @@
             this.btnLayanan = new System.Windows.Forms.Button();
             this.btnSparepart = new System.Windows.Forms.Button();
             this.btnCabang = new System.Windows.Forms.Button();
+            this.btnTambah = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnLogout.Location = new System.Drawing.Point(697, 389);
+            this.btnLogout.Location = new System.Drawing.Point(707, 380);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(111, 57);
             this.btnLogout.TabIndex = 19;
@@ -143,18 +147,52 @@
             this.btnCabang.UseVisualStyleBackColor = false;
             this.btnCabang.Click += new System.EventHandler(this.btnCabang_Click);
             // 
+            // btnTambah
+            // 
+            this.btnTambah.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnTambah.Location = new System.Drawing.Point(706, 259);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.Size = new System.Drawing.Size(111, 34);
+            this.btnTambah.TabIndex = 25;
+            this.btnTambah.Text = "Tambah";
+            this.btnTambah.UseVisualStyleBackColor = false;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(238, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(245, 24);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Pengelolahan Data Layanan\r\n";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(238, 73);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(579, 180);
+            this.dataGridView1.TabIndex = 23;
+            // 
             // FormLayanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(822, 449);
+            this.ClientSize = new System.Drawing.Size(830, 449);
+            this.Controls.Add(this.btnTambah);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.panel1);
             this.Name = "FormLayanan";
             this.Text = "FormLayanan";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -169,5 +207,8 @@
         private System.Windows.Forms.Button btnLayanan;
         private System.Windows.Forms.Button btnSparepart;
         private System.Windows.Forms.Button btnCabang;
+        private System.Windows.Forms.Button btnTambah;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

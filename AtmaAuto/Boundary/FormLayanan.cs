@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using AtmaAuto.Boundary;
 using AtmaAuto.Control;
 
 namespace AtmaAuto
@@ -42,16 +43,7 @@ namespace AtmaAuto
 
         private void btnTambah_Click(object sender, EventArgs e)
         {
-            userData2 userData2 = new userData2();
-            userData2.namalayanan = txtLayanan.Text;
-            userData2.biaya = txtBiaya.Text;
-
-            string Json = JsonConvert.SerializeObject(userData2);
-            LC.postJson = Json;
-
-            if (LC.tambahLayanan() != "error")
-            {
-            }
+           
 
         }
 
@@ -109,6 +101,11 @@ namespace AtmaAuto
             Dashboard dsh = new Dashboard();
             dsh.Show();
             this.Hide();
+        }
+
+        private void btnTambah_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
