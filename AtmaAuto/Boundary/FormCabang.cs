@@ -17,16 +17,7 @@ namespace AtmaAuto.Boundary
 
         private void btnTambah_Click(object sender, EventArgs e)
         {
-            UserData1 userData1 = new UserData1();
-            userData1.cabang = txtCabang.Text;
-            
-            String Json = JsonConvert.SerializeObject(userData1);
-            CC.postJson = Json;
-
-            if (CC.tambahCabang() != "error")
-            {
-            }
-           
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,15 +37,7 @@ namespace AtmaAuto.Boundary
 
         private void btnUbah_Click(object sender, EventArgs e)
         {
-            UserData1 userData1 = new UserData1();
-            userData1.cabang = txtCabang.Text;
-
-            String Json = JsonConvert.SerializeObject(userData1);
-            CC.postJson = Json;
-
-            if (CC.hapusCabang() != "error")
-            {
-            }
+        
 
 
 
@@ -62,15 +45,7 @@ namespace AtmaAuto.Boundary
 
         private void btnHapus_Click(object sender, EventArgs e)
         {
-            UserData1 userData1 = new UserData1();
-            userData1.cabang = txtCabang.Text;
-
-            String Json = JsonConvert.SerializeObject(userData1);
-            CC.postJson = Json;
-
-            if (CC.hapusCabang() != "error")
-            {
-            }
+         
 
         }
 
@@ -83,21 +58,69 @@ namespace AtmaAuto.Boundary
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            UserData1 userData1 = new UserData1();
-            userData1.cabang = txtCabang.Text;
-
-            String Json = JsonConvert.SerializeObject(userData1);
-            CC.postJson = Json;
-
-            if (CC.tampilCabang() != "error")
-            {
-            }
+         
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
         {
             Form1 f1 = new Form1();
             f1.Show();
+            this.Hide();
+        }
+
+        private void btnCabang_Click_1(object sender, EventArgs e)
+        {
+            FormCabang foc = new FormCabang();
+            foc.Show();
+            this.Hide();
+        }
+
+        private void btnLayanan_Click(object sender, EventArgs e)
+        {
+            FormLayanan fola = new FormLayanan();
+            fola.Show();
+            this.Hide();
+        }
+
+        private void btnKendaraan_Click(object sender, EventArgs e)
+        {
+            FormKendaraan foke = new FormKendaraan();
+            foke.Show();
+            this.Hide();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FormPegawai fopeg = new FormPegawai();
+            fopeg.Show();
+            this.Hide();
+        }
+
+        private void btnSparepart_Click(object sender, EventArgs e)
+        {
+            FormSparepart fosp = new FormSparepart();
+            fosp.Show();
+            this.Hide();
+        }
+
+        private void btnPembayaran_Click(object sender, EventArgs e)
+        {
+            FormPembayaran fobay = new FormPembayaran();
+            fobay.Show();
+            this.Hide();
+        }
+
+        private void btnLaporan_Click(object sender, EventArgs e)
+        {
+            FormLaporan folap = new FormLaporan();
+            folap.Show();
+            this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Dashboard dsh = new Dashboard();
+            dsh.Show();
             this.Hide();
         }
     }

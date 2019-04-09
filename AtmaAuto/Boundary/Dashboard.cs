@@ -152,5 +152,40 @@ namespace AtmaAuto.Boundary
             f1.Show();
             this.Hide();
         }
+
+        private void btnLayanan_Click_1(object sender, EventArgs e)
+        {
+            FormLayanan fola = new FormLayanan();
+            fola.Show();
+            this.Hide();
+        }
+
+        private void btnKendaraan_Click_1(object sender, EventArgs e)
+        {
+            FormKendaraan foke = new FormKendaraan();
+            foke.Show();
+            this.Hide();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FormPegawai fopeg = new FormPegawai();
+            fopeg.Show();
+            this.Hide();
+        }
+
+        private void btnPembayaran_Click(object sender, EventArgs e)
+        {
+            FormPembayaran fobay = new FormPembayaran();
+            fobay.Show();
+            this.Hide();
+        }
+
+        private void btnLaporan_Click_1(object sender, EventArgs e)
+        {
+            FormLaporan folap = new FormLaporan();
+            folap.Show();
+            this.Hide();
+        }
     }
 }
