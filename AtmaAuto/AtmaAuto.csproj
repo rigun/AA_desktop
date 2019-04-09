@@ -109,30 +109,6 @@
     <Compile Include="Boundary\FormSupplier.Designer.cs">
       <DependentUpon>FormSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Boundary\UC_Cabang.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Boundary\UC_Cabang.Designer.cs">
-      <DependentUpon>UC_Cabang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Boundary\UC_Kendaraan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Boundary\UC_Kendaraan.Designer.cs">
-      <DependentUpon>UC_Kendaraan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Boundary\UC_Layanan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Boundary\UC_Layanan.Designer.cs">
-      <DependentUpon>UC_Layanan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Boundary\UC_Pegawai.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Boundary\UC_Pegawai.Designer.cs">
-      <DependentUpon>UC_Pegawai.cs</DependentUpon>
-    </Compile>
     <Compile Include="Control\CabangControl.cs" />
     <Compile Include="Control\KendaraanControl.cs" />
     <Compile Include="Control\LayananControl.cs" />
@@ -170,18 +146,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Boundary\FormSupplier.resx">
       <DependentUpon>FormSupplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Boundary\UC_Cabang.resx">
-      <DependentUpon>UC_Cabang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Boundary\UC_Kendaraan.resx">
-      <DependentUpon>UC_Kendaraan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Boundary\UC_Layanan.resx">
-      <DependentUpon>UC_Layanan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Boundary\UC_Pegawai.resx">
-      <DependentUpon>UC_Pegawai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Boundary\FormLayanan.resx">
       <DependentUpon>FormLayanan.cs</DependentUpon>

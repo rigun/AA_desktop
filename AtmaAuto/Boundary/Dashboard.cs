@@ -58,9 +58,7 @@ namespace AtmaAuto.Boundary
 
         private void btnTambahKendaraan_Click(object sender, EventArgs e)
         {
-            UC_Kendaraan uck = new UC_Kendaraan();
-            uck.Show();
-            this.Hide();
+            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

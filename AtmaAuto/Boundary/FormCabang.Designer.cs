@@ -30,16 +30,14 @@
         {
             this.btnLogout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLaporan = new System.Windows.Forms.Button();
-            this.btnPembayaran = new System.Windows.Forms.Button();
-            this.btnKendaraan = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnLayanan = new System.Windows.Forms.Button();
-            this.btnSparepart = new System.Windows.Forms.Button();
-            this.btnCabang = new System.Windows.Forms.Button();
+            this.txtNamaCabang = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnTambah = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -47,9 +45,9 @@
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnLogout.Location = new System.Drawing.Point(696, 382);
+            this.btnLogout.Location = new System.Drawing.Point(711, 400);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(111, 57);
+            this.btnLogout.Size = new System.Drawing.Size(96, 39);
             this.btnLogout.TabIndex = 16;
             this.btnLogout.Text = "Keluar";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -58,101 +56,37 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.btnLaporan);
-            this.panel1.Controls.Add(this.btnPembayaran);
-            this.panel1.Controls.Add(this.btnKendaraan);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnLayanan);
-            this.panel1.Controls.Add(this.btnSparepart);
-            this.panel1.Controls.Add(this.btnCabang);
+            this.panel1.Controls.Add(this.txtNamaCabang);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(-14, -8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(236, 470);
+            this.panel1.Size = new System.Drawing.Size(309, 470);
             this.panel1.TabIndex = 14;
             // 
-            // btnLaporan
+            // txtNamaCabang
             // 
-            this.btnLaporan.BackColor = System.Drawing.Color.DarkGray;
-            this.btnLaporan.Location = new System.Drawing.Point(62, 374);
-            this.btnLaporan.Name = "btnLaporan";
-            this.btnLaporan.Size = new System.Drawing.Size(111, 51);
-            this.btnLaporan.TabIndex = 21;
-            this.btnLaporan.Text = "Laporan";
-            this.btnLaporan.UseVisualStyleBackColor = false;
-            this.btnLaporan.Click += new System.EventHandler(this.btnLaporan_Click);
+            this.txtNamaCabang.Location = new System.Drawing.Point(143, 104);
+            this.txtNamaCabang.Name = "txtNamaCabang";
+            this.txtNamaCabang.Size = new System.Drawing.Size(159, 20);
+            this.txtNamaCabang.TabIndex = 2;
             // 
-            // btnPembayaran
+            // label3
             // 
-            this.btnPembayaran.BackColor = System.Drawing.Color.DarkGray;
-            this.btnPembayaran.Location = new System.Drawing.Point(62, 317);
-            this.btnPembayaran.Name = "btnPembayaran";
-            this.btnPembayaran.Size = new System.Drawing.Size(111, 51);
-            this.btnPembayaran.TabIndex = 20;
-            this.btnPembayaran.Text = "Pembayaran";
-            this.btnPembayaran.UseVisualStyleBackColor = false;
-            this.btnPembayaran.Click += new System.EventHandler(this.btnPembayaran_Click);
-            // 
-            // btnKendaraan
-            // 
-            this.btnKendaraan.BackColor = System.Drawing.Color.DarkGray;
-            this.btnKendaraan.Location = new System.Drawing.Point(62, 146);
-            this.btnKendaraan.Name = "btnKendaraan";
-            this.btnKendaraan.Size = new System.Drawing.Size(111, 51);
-            this.btnKendaraan.TabIndex = 18;
-            this.btnKendaraan.Text = "Kendaraan";
-            this.btnKendaraan.UseVisualStyleBackColor = false;
-            this.btnKendaraan.Click += new System.EventHandler(this.btnKendaraan_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkGray;
-            this.button1.Location = new System.Drawing.Point(62, 203);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 51);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Pegawai";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // btnLayanan
-            // 
-            this.btnLayanan.BackColor = System.Drawing.Color.DarkGray;
-            this.btnLayanan.Location = new System.Drawing.Point(62, 89);
-            this.btnLayanan.Name = "btnLayanan";
-            this.btnLayanan.Size = new System.Drawing.Size(111, 51);
-            this.btnLayanan.TabIndex = 17;
-            this.btnLayanan.Text = "Layanan";
-            this.btnLayanan.UseVisualStyleBackColor = false;
-            this.btnLayanan.Click += new System.EventHandler(this.btnLayanan_Click);
-            // 
-            // btnSparepart
-            // 
-            this.btnSparepart.BackColor = System.Drawing.Color.DarkGray;
-            this.btnSparepart.Location = new System.Drawing.Point(62, 260);
-            this.btnSparepart.Name = "btnSparepart";
-            this.btnSparepart.Size = new System.Drawing.Size(111, 51);
-            this.btnSparepart.TabIndex = 16;
-            this.btnSparepart.Text = "Sparepart";
-            this.btnSparepart.UseVisualStyleBackColor = false;
-            this.btnSparepart.Click += new System.EventHandler(this.btnSparepart_Click);
-            // 
-            // btnCabang
-            // 
-            this.btnCabang.BackColor = System.Drawing.Color.DarkGray;
-            this.btnCabang.Location = new System.Drawing.Point(62, 32);
-            this.btnCabang.Name = "btnCabang";
-            this.btnCabang.Size = new System.Drawing.Size(111, 51);
-            this.btnCabang.TabIndex = 15;
-            this.btnCabang.Text = "Cabang";
-            this.btnCabang.UseVisualStyleBackColor = false;
-            this.btnCabang.Click += new System.EventHandler(this.btnCabang_Click_1);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(26, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Nama Cabang";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(228, 81);
+            this.dataGridView1.Location = new System.Drawing.Point(310, 83);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(579, 180);
+            this.dataGridView1.Size = new System.Drawing.Size(497, 180);
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -160,7 +94,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(228, 35);
+            this.label1.Location = new System.Drawing.Point(567, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(240, 24);
             this.label1.TabIndex = 18;
@@ -169,12 +103,43 @@
             // btnTambah
             // 
             this.btnTambah.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnTambah.Location = new System.Drawing.Point(696, 269);
+            this.btnTambah.Location = new System.Drawing.Point(310, 269);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(111, 34);
+            this.btnTambah.Size = new System.Drawing.Size(68, 34);
             this.btnTambah.TabIndex = 22;
             this.btnTambah.Text = "Tambah";
             this.btnTambah.UseVisualStyleBackColor = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUpdate.Location = new System.Drawing.Point(384, 269);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(68, 34);
+            this.btnUpdate.TabIndex = 23;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnDelete.Location = new System.Drawing.Point(458, 269);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(68, 34);
+            this.btnDelete.TabIndex = 24;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.Location = new System.Drawing.Point(609, 400);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(96, 39);
+            this.btnBack.TabIndex = 25;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // FormCabang
             // 
@@ -182,15 +147,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(819, 451);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.panel1);
             this.Name = "FormCabang";
+<<<<<<< HEAD
             this.Text = "Tambah";
             this.Load += new System.EventHandler(this.FormCabang_Load);
+=======
+            this.Text = "Cabang";
+>>>>>>> d32b456f935d4812f875098def84d3e7cd0c5cdb
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -201,15 +174,13 @@
 
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnLaporan;
-        private System.Windows.Forms.Button btnPembayaran;
-        private System.Windows.Forms.Button btnKendaraan;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnLayanan;
-        private System.Windows.Forms.Button btnSparepart;
-        private System.Windows.Forms.Button btnCabang;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTambah;
+        private System.Windows.Forms.MaskedTextBox txtNamaCabang;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnBack;
     }
 }
