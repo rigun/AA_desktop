@@ -8,6 +8,6 @@ namespace AtmaAuto.Entity
 {
     class Cabang
     {
-        public string cabang { get; set; }
+      public string name { get; set; }
     }
 }

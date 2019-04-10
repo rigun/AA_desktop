@@ -50,6 +50,7 @@ namespace AtmaAuto.Control
                     response = await result.Content.ReadAsStringAsync();
                 }catch(Exception ex)
                 {
+                    Console.WriteLine(ex.ToString());
                     response = "Pengguna tidak diketahui";
                 }
             }

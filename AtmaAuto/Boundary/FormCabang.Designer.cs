@@ -45,7 +45,7 @@
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnLogout.Location = new System.Drawing.Point(711, 400);
+            this.btnLogout.Location = new System.Drawing.Point(510, 400);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(96, 39);
             this.btnLogout.TabIndex = 16;
@@ -58,14 +58,15 @@
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.txtNamaCabang);
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.btnTambah);
             this.panel1.Location = new System.Drawing.Point(-14, -8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(309, 470);
+            this.panel1.Size = new System.Drawing.Size(206, 470);
             this.panel1.TabIndex = 14;
             // 
             // txtNamaCabang
             // 
-            this.txtNamaCabang.Location = new System.Drawing.Point(143, 104);
+            this.txtNamaCabang.Location = new System.Drawing.Point(30, 127);
             this.txtNamaCabang.Name = "txtNamaCabang";
             this.txtNamaCabang.Size = new System.Drawing.Size(159, 20);
             this.txtNamaCabang.TabIndex = 2;
@@ -84,9 +85,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(310, 83);
+            this.dataGridView1.Location = new System.Drawing.Point(213, 83);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(497, 180);
+            this.dataGridView1.Size = new System.Drawing.Size(393, 180);
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -94,7 +95,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(567, 18);
+            this.label1.Location = new System.Drawing.Point(366, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(240, 24);
             this.label1.TabIndex = 18;
@@ -103,7 +104,7 @@
             // btnTambah
             // 
             this.btnTambah.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnTambah.Location = new System.Drawing.Point(310, 269);
+            this.btnTambah.Location = new System.Drawing.Point(30, 153);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(68, 34);
             this.btnTambah.TabIndex = 22;
@@ -136,7 +137,7 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnBack.Location = new System.Drawing.Point(609, 400);
+            this.btnBack.Location = new System.Drawing.Point(408, 400);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(96, 39);
             this.btnBack.TabIndex = 25;
@@ -149,11 +150,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(819, 451);
+            this.ClientSize = new System.Drawing.Size(634, 451);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnLogout);
