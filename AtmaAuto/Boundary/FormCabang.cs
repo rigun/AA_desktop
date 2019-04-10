@@ -19,7 +19,7 @@ namespace AtmaAuto.Boundary
         {
             InitializeComponent();
             FileHandling fh = new FileHandling();
-            this.cabangControl.token = fh.ReadData(); 
+            this.cabangControl.token = fh.ReadData();
             string responseContent = cabangControl.getData();
             this.cabangs = JArray.Parse(responseContent.ToString());
             this.setTable();
@@ -40,12 +40,12 @@ namespace AtmaAuto.Boundary
                 row["Name"] = cabang.name;
                 row["Dibuat Pada"] = cabang.created_at;
                 dt.Rows.Add(row);
-                
+
             }
-            
+
 
             dataGridView1.DataSource = dt;
-            if(this.setTableStatus == 0)
+            if (this.setTableStatus == 0)
             {
                 DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
                 dataGridView1.Columns.Add(btn);
@@ -57,10 +57,10 @@ namespace AtmaAuto.Boundary
             }
 
         }
-        
+
         private void btnTambah_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace AtmaAuto.Boundary
 
         private void btnUbah_Click(object sender, EventArgs e)
         {
-        
+
 
 
 
@@ -88,7 +88,7 @@ namespace AtmaAuto.Boundary
 
         private void btnHapus_Click(object sender, EventArgs e)
         {
-         
+
 
         }
 
@@ -101,7 +101,7 @@ namespace AtmaAuto.Boundary
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-         
+
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
@@ -183,7 +183,6 @@ namespace AtmaAuto.Boundary
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-<<<<<<< HEAD
             string responseContent = CC.getData();
             dynamic json = JObject.Parse(responseContent);
             string token = json.access_token;
@@ -199,9 +198,7 @@ namespace AtmaAuto.Boundary
             {
                 MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-=======
-            MessageBox.Show((e.RowIndex + 1) + "Row  "+ (e.ColumnIndex + 1) + "  Column button clicked ");
->>>>>>> 1a8b335e3214596aaa9eef080f43a8c0de349507
+            MessageBox.Show((e.RowIndex + 1) + "Row  " + (e.ColumnIndex + 1) + "  Column button clicked ");
         }
 
         private void FormCabang_Load(object sender, EventArgs e)
@@ -211,75 +208,29 @@ namespace AtmaAuto.Boundary
 
         private void btnTambah_Click_1(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            string responseContent = CC.tambahCabang();
-            dynamic json = JObject.Parse(responseContent);
-            string token = json.access_token;
-            if (token != null)
-            {
-                FileHandling wr = new FileHandling();
-                wr.WriteData(token);
-                Dashboard dsh = new Dashboard();
-                dsh.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            string responseContent = CC.updateCabang();
-            dynamic json = JObject.Parse(responseContent);
-            string token = json.access_token;
-            if (token != null)
-            {
-                FileHandling wr = new FileHandling();
-                wr.WriteData(token);
-                Dashboard dsh = new Dashboard();
-                dsh.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            string responseContent = CC.hapusCabang();
-            dynamic json = JObject.Parse(responseContent);
-            string token = json.access_token;
-            if (token != null)
-            {
-                FileHandling wr = new FileHandling();
-                wr.WriteData(token);
-                Dashboard dsh = new Dashboard();
-                dsh.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-=======
-            if(txtNamaCabang.Text != null && txtNamaCabang.Text != "")
+            if (txtNamaCabang.Text != null && txtNamaCabang.Text != "")
             {
                 Cabang cabang = new Cabang();
                 cabang.name = txtNamaCabang.Text;
                 string success = cabangControl.sendData(cabang);
                 dynamic json = JObject.Parse(success);
-                if(success != null)
+                if (success != null)
                 {
                     string responseContent = cabangControl.getData();
                     this.cabangs = JArray.Parse(responseContent.ToString());
                     this.setTable();
                 }
->>>>>>> 1a8b335e3214596aaa9eef080f43a8c0de349507
             }
+        }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

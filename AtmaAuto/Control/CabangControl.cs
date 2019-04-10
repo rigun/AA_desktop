@@ -14,7 +14,7 @@ namespace AtmaAuto.Control
     class CabangControl
     {
         public string token { get; set; }
-        private string url = "http://api1.thekingcorp.org/branch";
+        private string url = "https://api1.thekingcorp.org/branch";
         public string getData()
         {
             var t = Task.Run(() => GetURI(new Uri(this.url), this.token));

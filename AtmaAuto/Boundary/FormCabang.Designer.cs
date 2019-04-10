@@ -32,9 +32,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtNamaCabang = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnTambah = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnTambah = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
@@ -57,11 +57,13 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.txtNamaCabang);
+            this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnTambah);
+            this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Location = new System.Drawing.Point(-14, -8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(206, 470);
+            this.panel1.Size = new System.Drawing.Size(248, 470);
             this.panel1.TabIndex = 14;
             // 
             // txtNamaCabang
@@ -82,12 +84,23 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Nama Cabang";
             // 
+            // btnTambah
+            // 
+            this.btnTambah.BackColor = System.Drawing.Color.DarkGray;
+            this.btnTambah.Location = new System.Drawing.Point(26, 153);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.Size = new System.Drawing.Size(68, 34);
+            this.btnTambah.TabIndex = 22;
+            this.btnTambah.Text = "Tambah";
+            this.btnTambah.UseVisualStyleBackColor = false;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click_1);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(213, 83);
+            this.dataGridView1.Location = new System.Drawing.Point(240, 83);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(393, 180);
+            this.dataGridView1.Size = new System.Drawing.Size(366, 180);
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -101,21 +114,10 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Pengelolahan Data Cabang";
             // 
-            // btnTambah
-            // 
-            this.btnTambah.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnTambah.Location = new System.Drawing.Point(30, 153);
-            this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(68, 34);
-            this.btnTambah.TabIndex = 22;
-            this.btnTambah.Text = "Tambah";
-            this.btnTambah.UseVisualStyleBackColor = false;
-            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click_1);
-            // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnUpdate.Location = new System.Drawing.Point(384, 269);
+            this.btnUpdate.BackColor = System.Drawing.Color.DarkGray;
+            this.btnUpdate.Location = new System.Drawing.Point(100, 153);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(68, 34);
             this.btnUpdate.TabIndex = 23;
@@ -125,8 +127,8 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnDelete.Location = new System.Drawing.Point(458, 269);
+            this.btnDelete.BackColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.Location = new System.Drawing.Point(174, 153);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(68, 34);
             this.btnDelete.TabIndex = 24;
@@ -152,8 +154,6 @@
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(634, 451);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnLogout);
