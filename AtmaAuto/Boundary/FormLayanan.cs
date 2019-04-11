@@ -66,7 +66,7 @@ namespace AtmaAuto.Boundary
                 Layanan layanan = new Layanan();
                 layanan.namalayanan = txtLayanan.Text;
                 layanan.biaya = txtBiaya.Text;
-                string success = layanancontrol.sendData(layanans);
+                string success = layanancontrol.sendData(layanan);
            
                 dynamic json = JObject.Parse(success);
                 if (success != null)
@@ -96,6 +96,26 @@ namespace AtmaAuto.Boundary
                 MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             MessageBox.Show((e.RowIndex + 1) + "Row  " + (e.ColumnIndex + 1) + "  Column button clicked ");
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Dashboard dsh = new Dashboard();
+            dsh.Show();
+            this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Ingin Keluar Dari Aplikasi Ini ???", "Konfirmasi",
+          MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                FileHandling wr = new FileHandling();
+                wr.WriteData("");
+                Form1 f1 = new Form1();
+                f1.Show();
+                this.Hide();
+            }
         }
     }
 }

@@ -29,9 +29,9 @@ namespace AtmaAuto.Control
             return t.Result;
         }
 
-        public string sendData(Cabang cabang)
+        public string sendData(Layanan layanan)
         {
-            var payload = JsonConvert.SerializeObject(cabang);
+            var payload = JsonConvert.SerializeObject(layanan);
 
             Uri u = new Uri(this.url);
             HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");

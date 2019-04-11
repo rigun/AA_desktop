@@ -33,13 +33,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtBiaya = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtLayanan = new System.Windows.Forms.MaskedTextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnTambah = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.txtBiaya = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtLayanan = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +53,7 @@
             this.btnBack.TabIndex = 41;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnLogout
             // 
@@ -63,6 +64,7 @@
             this.btnLogout.TabIndex = 40;
             this.btnLogout.Text = "Keluar";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // label1
             // 
@@ -86,58 +88,22 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnTambah);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.txtBiaya);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtLayanan);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(-15, -10);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(317, 470);
             this.panel1.TabIndex = 34;
             // 
-            // txtBiaya
-            // 
-            this.txtBiaya.Location = new System.Drawing.Point(143, 142);
-            this.txtBiaya.Name = "txtBiaya";
-            this.txtBiaya.Size = new System.Drawing.Size(159, 20);
-            this.txtBiaya.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(26, 142);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Biaya";
-            // 
-            // txtLayanan
-            // 
-            this.txtLayanan.Location = new System.Drawing.Point(143, 104);
-            this.txtLayanan.Name = "txtLayanan";
-            this.txtLayanan.Size = new System.Drawing.Size(159, 20);
-            this.txtLayanan.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(26, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Nama Layanan\r\n";
-            // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.Location = new System.Drawing.Point(234, 180);
+            this.btnDelete.Location = new System.Drawing.Point(223, 237);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(68, 34);
             this.btnDelete.TabIndex = 27;
@@ -147,7 +113,7 @@
             // btnTambah
             // 
             this.btnTambah.BackColor = System.Drawing.Color.DarkGray;
-            this.btnTambah.Location = new System.Drawing.Point(86, 180);
+            this.btnTambah.Location = new System.Drawing.Point(75, 237);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(68, 34);
             this.btnTambah.TabIndex = 25;
@@ -158,12 +124,48 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.DarkGray;
-            this.btnUpdate.Location = new System.Drawing.Point(160, 180);
+            this.btnUpdate.Location = new System.Drawing.Point(149, 237);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(68, 34);
             this.btnUpdate.TabIndex = 26;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // txtBiaya
+            // 
+            this.txtBiaya.Location = new System.Drawing.Point(31, 177);
+            this.txtBiaya.Name = "txtBiaya";
+            this.txtBiaya.Size = new System.Drawing.Size(159, 20);
+            this.txtBiaya.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(27, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Biaya";
+            // 
+            // txtLayanan
+            // 
+            this.txtLayanan.Location = new System.Drawing.Point(31, 114);
+            this.txtLayanan.Name = "txtLayanan";
+            this.txtLayanan.Size = new System.Drawing.Size(159, 20);
+            this.txtLayanan.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(27, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(116, 20);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Nama Layanan";
             // 
             // FormLayanan
             // 
@@ -196,9 +198,9 @@
         private System.Windows.Forms.MaskedTextBox txtBiaya;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox txtLayanan;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnTambah;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label label4;
     }
 }
