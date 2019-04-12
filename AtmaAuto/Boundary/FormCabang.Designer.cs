@@ -31,7 +31,6 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtNamaCabang = new System.Windows.Forms.MaskedTextBox();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnTambah = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -57,7 +56,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.txtNamaCabang);
-            this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnTambah);
             this.panel1.Controls.Add(this.btnUpdate);
@@ -70,19 +68,8 @@
             // 
             this.txtNamaCabang.Location = new System.Drawing.Point(30, 127);
             this.txtNamaCabang.Name = "txtNamaCabang";
-            this.txtNamaCabang.Size = new System.Drawing.Size(159, 20);
+            this.txtNamaCabang.Size = new System.Drawing.Size(204, 20);
             this.txtNamaCabang.TabIndex = 2;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.Location = new System.Drawing.Point(174, 153);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(68, 34);
-            this.btnDelete.TabIndex = 24;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label3
             // 
@@ -98,7 +85,7 @@
             // btnTambah
             // 
             this.btnTambah.BackColor = System.Drawing.Color.DarkGray;
-            this.btnTambah.Location = new System.Drawing.Point(26, 153);
+            this.btnTambah.Location = new System.Drawing.Point(92, 162);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(68, 34);
             this.btnTambah.TabIndex = 22;
@@ -109,7 +96,7 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.DarkGray;
-            this.btnUpdate.Location = new System.Drawing.Point(100, 153);
+            this.btnUpdate.Location = new System.Drawing.Point(166, 162);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(68, 34);
             this.btnUpdate.TabIndex = 23;
@@ -159,7 +146,7 @@
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.panel1);
             this.Name = "FormCabang";
-            this.Text = "Tambah";
+            this.Text = "Cabang";
             this.Load += new System.EventHandler(this.FormCabang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -179,7 +166,6 @@
         private System.Windows.Forms.MaskedTextBox txtNamaCabang;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnBack;
     }
 }

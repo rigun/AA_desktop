@@ -32,14 +32,14 @@ namespace AtmaAuto.Boundary
             DataTable dt = new DataTable();
             dt.Clear();
             dt.Columns.Add("name");
-            dt.Columns.Add("biaya");
+            dt.Columns.Add("price");
             dt.Columns.Add("Dibuat Pada");
 
             foreach (dynamic layanan in this.layanans)
             {
                 DataRow row = dt.NewRow();
                 row["Name"] = layanan.name;
-                row["Biaya"] = layanan.biaya;
+                row["Price"] = layanan.price;
                 row["Dibuat pada"] = layanan.created_at;
                 dt.Rows.Add(row);
             }
@@ -63,9 +63,10 @@ namespace AtmaAuto.Boundary
         {
             if (txtLayanan.Text != null && txtLayanan.Text != "" || txtBiaya.Text != null && txtBiaya.Text != "")
             {
+            
                 Layanan layanan = new Layanan();
-                layanan.namalayanan = txtLayanan.Text;
-                layanan.biaya = txtBiaya.Text;
+                layanan.name = txtLayanan.Text;
+                layanan.price = txtBiaya.Text;
                 string success = layanancontrol.sendData(layanan);
            
                 dynamic json = JObject.Parse(success);

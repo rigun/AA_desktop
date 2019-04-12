@@ -8,7 +8,7 @@ namespace AtmaAuto.Entity
 {
     class Layanan
     {
-        public string namalayanan { get; set; }
-        public string biaya { get; set; }
+        public string name { get; set; }
+        public string price { get; set; }
     }
 }

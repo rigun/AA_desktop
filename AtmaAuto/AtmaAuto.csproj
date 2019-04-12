@@ -144,6 +144,9 @@
     <EmbeddedResource Include="Boundary\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Boundary\FormPegawai.resx">
+      <DependentUpon>FormPegawai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Boundary\FormSparepart.resx">
       <DependentUpon>FormSparepart.cs</DependentUpon>
     </EmbeddedResource>

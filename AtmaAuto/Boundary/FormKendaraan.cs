@@ -26,6 +26,7 @@ namespace AtmaAuto.Boundary
         }
 
         KendaraanControl KC = new KendaraanControl();
+
         public void setTable()
         {
             DataTable dt = new DataTable();
@@ -37,9 +38,9 @@ namespace AtmaAuto.Boundary
             foreach (dynamic kendaraan in this.kendaraans)
             {
                 DataRow row = dt.NewRow();
-                row["Merk"] = kendaraans.merk;
-                row["Type"] = kendaraans.type;
-                row["Dibuat Pada"] = kendaraans.created_at;
+                row["Merk"] = kendaraan.merk;
+                row["Type"] = kendaraan.type;
+                row["Dibuat Pada"] = kendaraan.created_at;
                 dt.Rows.Add(row);
 
             }
@@ -92,7 +93,7 @@ namespace AtmaAuto.Boundary
                 Kendaraan kendaraan = new Kendaraan();
                 kendaraan.merk = txtMerkKendaraan.Text;
                 kendaraan.type = txtNamaKendaraan.Text;
-                string success = kendaraanControl.sendData(kendaraans);
+                string success = kendaraanControl.sendData(kendaraan);
               
                 dynamic json = JObject.Parse(success);
                 if (success != null)

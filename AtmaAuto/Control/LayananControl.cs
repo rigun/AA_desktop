@@ -14,6 +14,7 @@ namespace AtmaAuto.Control
     {
         public string token { get; set; }
         private string url = "http://api1.thekingcorp.org/service";
+
         public string getData()
         {
             var t = Task.Run(() => GetURI(new Uri(this.url), this.token));

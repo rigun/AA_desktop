@@ -33,13 +33,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnTambah = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtBiaya = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtLayanan = new System.Windows.Forms.MaskedTextBox();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -89,7 +88,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnTambah);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.txtBiaya);
@@ -100,20 +98,21 @@
             this.panel1.Size = new System.Drawing.Size(317, 470);
             this.panel1.TabIndex = 34;
             // 
-            // btnDelete
+            // label4
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.Location = new System.Drawing.Point(223, 237);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(68, 34);
-            this.btnDelete.TabIndex = 27;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(27, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(116, 20);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Nama Layanan";
             // 
             // btnTambah
             // 
             this.btnTambah.BackColor = System.Drawing.Color.DarkGray;
-            this.btnTambah.Location = new System.Drawing.Point(75, 237);
+            this.btnTambah.Location = new System.Drawing.Point(155, 215);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(68, 34);
             this.btnTambah.TabIndex = 25;
@@ -124,7 +123,7 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.DarkGray;
-            this.btnUpdate.Location = new System.Drawing.Point(149, 237);
+            this.btnUpdate.Location = new System.Drawing.Point(229, 215);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(68, 34);
             this.btnUpdate.TabIndex = 26;
@@ -135,7 +134,7 @@
             // 
             this.txtBiaya.Location = new System.Drawing.Point(31, 177);
             this.txtBiaya.Name = "txtBiaya";
-            this.txtBiaya.Size = new System.Drawing.Size(159, 20);
+            this.txtBiaya.Size = new System.Drawing.Size(266, 20);
             this.txtBiaya.TabIndex = 4;
             // 
             // label2
@@ -153,19 +152,8 @@
             // 
             this.txtLayanan.Location = new System.Drawing.Point(31, 114);
             this.txtLayanan.Name = "txtLayanan";
-            this.txtLayanan.Size = new System.Drawing.Size(159, 20);
+            this.txtLayanan.Size = new System.Drawing.Size(266, 20);
             this.txtLayanan.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(27, 91);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 20);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Nama Layanan";
             // 
             // FormLayanan
             // 
@@ -198,7 +186,6 @@
         private System.Windows.Forms.MaskedTextBox txtBiaya;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox txtLayanan;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnTambah;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label4;
