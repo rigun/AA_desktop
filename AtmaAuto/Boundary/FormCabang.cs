@@ -220,6 +220,8 @@ namespace AtmaAuto.Boundary
                     this.cabangs = JArray.Parse(responseContent.ToString());
                     this.setTable();
                 }
+                MessageBox.Show("Data Anda Berhasil Ditambahkan", "SELAMAT", MessageBoxButtons.OK);
+
             }
         }
 

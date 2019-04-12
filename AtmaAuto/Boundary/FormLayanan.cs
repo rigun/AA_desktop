@@ -76,6 +76,7 @@ namespace AtmaAuto.Boundary
                     this.layanans = JArray.Parse(responseContent.ToString());
                     this.setTable();
                 }
+                MessageBox.Show("Data Anda Berhasil Ditambahkan", "SELAMAT", MessageBoxButtons.OK);
             }
         }
 

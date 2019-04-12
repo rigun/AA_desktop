@@ -45,6 +45,7 @@ namespace AtmaAuto
             string responseContent = LC.cekLogin(txtUsername.Text, txtPassword.Text);
             dynamic json = JObject.Parse(responseContent);
             string token = json.access_token;
+
             if(token != null)
             {
                 FileHandling wr = new FileHandling();

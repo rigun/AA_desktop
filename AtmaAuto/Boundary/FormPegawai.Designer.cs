@@ -62,6 +62,7 @@
             this.btnLogout.TabIndex = 45;
             this.btnLogout.Text = "Keluar";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // label1
             // 
