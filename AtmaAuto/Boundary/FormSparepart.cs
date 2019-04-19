@@ -16,5 +16,10 @@ namespace AtmaAuto.Boundary
         {
             InitializeComponent();
         }
+
+        private void btnCabang_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

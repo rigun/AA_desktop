@@ -37,6 +37,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPencarian = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +72,7 @@
             this.txtNamaCabang.Name = "txtNamaCabang";
             this.txtNamaCabang.Size = new System.Drawing.Size(204, 20);
             this.txtNamaCabang.TabIndex = 2;
+            this.txtNamaCabang.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtNamaCabang_MaskInputRejected);
             // 
             // label3
             // 
@@ -134,12 +137,30 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(445, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Pencarian";
+            // 
+            // txtPencarian
+            // 
+            this.txtPencarian.Location = new System.Drawing.Point(506, 57);
+            this.txtPencarian.Name = "txtPencarian";
+            this.txtPencarian.Size = new System.Drawing.Size(100, 20);
+            this.txtPencarian.TabIndex = 27;
+            // 
             // FormCabang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(634, 451);
+            this.Controls.Add(this.txtPencarian);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -167,5 +188,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MaskedTextBox txtPencarian;
     }
 }

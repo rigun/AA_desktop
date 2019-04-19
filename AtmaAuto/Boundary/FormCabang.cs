@@ -234,5 +234,10 @@ namespace AtmaAuto.Boundary
         {
             
         }
+
+        private void txtNamaCabang_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

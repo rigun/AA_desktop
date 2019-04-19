@@ -39,6 +39,8 @@
             this.txtBiaya = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtLayanan = new System.Windows.Forms.MaskedTextBox();
+            this.txtPencarian = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -78,7 +80,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(309, 81);
+            this.dataGridView1.Location = new System.Drawing.Point(311, 104);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(505, 180);
             this.dataGridView1.TabIndex = 35;
@@ -155,12 +157,30 @@
             this.txtLayanan.Size = new System.Drawing.Size(266, 20);
             this.txtLayanan.TabIndex = 2;
             // 
+            // txtPencarian
+            // 
+            this.txtPencarian.Location = new System.Drawing.Point(716, 78);
+            this.txtPencarian.Name = "txtPencarian";
+            this.txtPencarian.Size = new System.Drawing.Size(100, 20);
+            this.txtPencarian.TabIndex = 43;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(655, 81);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "Pencarian";
+            // 
             // FormLayanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(825, 450);
+            this.Controls.Add(this.txtPencarian);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.label1);
@@ -189,5 +209,7 @@
         private System.Windows.Forms.Button btnTambah;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.MaskedTextBox txtPencarian;
+        private System.Windows.Forms.Label label3;
     }
 }

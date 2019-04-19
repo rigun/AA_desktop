@@ -138,6 +138,7 @@
             this.btnCabang.TabIndex = 1;
             this.btnCabang.Text = "Cabang";
             this.btnCabang.UseVisualStyleBackColor = false;
+            this.btnCabang.Click += new System.EventHandler(this.btnCabang_Click);
             // 
             // btnSupplier
             // 

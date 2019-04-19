@@ -119,12 +119,14 @@
     <Compile Include="Control\KendaraanControl.cs" />
     <Compile Include="Control\LayananControl.cs" />
     <Compile Include="Control\LoginControl.cs" />
+    <Compile Include="Control\PegawaiControl.cs" />
     <Compile Include="Control\SIAAControl.cs" />
     <Compile Include="Entity\Cabang.cs" />
     <Compile Include="Entity\FileHandling.cs" />
     <Compile Include="Entity\Kendaraan.cs" />
     <Compile Include="Entity\Layanan.cs" />
     <Compile Include="Entity\Login.cs" />
+    <Compile Include="Entity\Pegawai.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestClient.cs" />
