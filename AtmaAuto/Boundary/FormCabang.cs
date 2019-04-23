@@ -233,7 +233,21 @@ namespace AtmaAuto.Boundary
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            
+            if (txtNamaCabang.Text != null && txtNamaCabang.Text != "")
+            {
+                Cabang cabang = new Cabang();
+                cabang.name = txtNamaCabang.Text;
+                string success = cabangControl.sendData(cabang);
+                dynamic json = JObject.Parse(success);
+                if (success != null)
+                {
+                    string responseContent = cabangControl.getData();
+                    this.cabangs = JArray.Parse(responseContent.ToString());
+                    this.setTable();
+                }
+                MessageBox.Show("Data Anda Berhasil Diupdate", "SELAMAT", MessageBoxButtons.OK);
+
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -257,6 +271,25 @@ namespace AtmaAuto.Boundary
         {
             System.Data.DataTable dt = new DataTable();
 
+        }
+
+        private void btnHapus_Click_1(object sender, EventArgs e)
+        {
+            if (txtNamaCabang.Text != null && txtNamaCabang.Text != "")
+            {
+                Cabang cabang = new Cabang();
+                cabang.name = txtNamaCabang.Text;
+                string success = cabangControl.deleteData(1);
+                dynamic json = JObject.Parse(success);
+                if (success != null)
+                {
+                    string responseContent = cabangControl.getData();
+                    this.cabangs = JArray.Parse(responseContent.ToString());
+                    this.setTable();
+                }
+                MessageBox.Show("Data Anda Berhasil DiHapuskan", "SELAMAT", MessageBoxButtons.OK);
+
+            }
         }
     }
 }

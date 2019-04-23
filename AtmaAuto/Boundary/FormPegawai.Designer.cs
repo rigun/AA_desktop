@@ -49,6 +49,7 @@
             this.txtName = new System.Windows.Forms.MaskedTextBox();
             this.txtPencarian = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnHapus = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +97,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.btnHapus);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtKota);
             this.panel1.Controls.Add(this.label2);
@@ -219,7 +221,7 @@
             // btnTambah
             // 
             this.btnTambah.BackColor = System.Drawing.Color.DarkGray;
-            this.btnTambah.Location = new System.Drawing.Point(158, 393);
+            this.btnTambah.Location = new System.Drawing.Point(78, 394);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(68, 34);
             this.btnTambah.TabIndex = 25;
@@ -230,7 +232,7 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.DarkGray;
-            this.btnUpdate.Location = new System.Drawing.Point(232, 393);
+            this.btnUpdate.Location = new System.Drawing.Point(152, 394);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(68, 34);
             this.btnUpdate.TabIndex = 26;
@@ -261,6 +263,16 @@
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 47;
             this.label3.Text = "Pencarian";
+            // 
+            // btnHapus
+            // 
+            this.btnHapus.BackColor = System.Drawing.Color.DarkGray;
+            this.btnHapus.Location = new System.Drawing.Point(226, 394);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.Size = new System.Drawing.Size(68, 34);
+            this.btnHapus.TabIndex = 49;
+            this.btnHapus.Text = "Hapus";
+            this.btnHapus.UseVisualStyleBackColor = false;
             // 
             // FormPegawai
             // 
@@ -308,5 +320,6 @@
         private System.Windows.Forms.MaskedTextBox txtRole;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MaskedTextBox txtSalary;
+        private System.Windows.Forms.Button btnHapus;
     }
 }

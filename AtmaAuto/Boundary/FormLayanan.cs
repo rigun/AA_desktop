@@ -134,5 +134,47 @@ namespace AtmaAuto.Boundary
         {
             string sql = "select * from example where nama like '%" + txtPencarian.Text + "%'" + "order by no asc";
         }
+
+        private void btnHapus_Click(object sender, EventArgs e)
+        {
+            if (txtLayanan.Text != null && txtLayanan.Text != "" || txtBiaya.Text != null && txtBiaya.Text != "")
+            {
+
+                Layanan layanan = new Layanan();
+                layanan.name = txtLayanan.Text;
+                layanan.price = txtBiaya.Text;
+                string success = layanancontrol.deleteData(1);
+
+                dynamic json = JObject.Parse(success);
+                if (success != null)
+                {
+                    string responseContent = layanancontrol.getData();
+                    this.layanans = JArray.Parse(responseContent.ToString());
+                    this.setTable();
+                }
+                MessageBox.Show("Data Anda Berhasil Dihapuskan", "SELAMAT", MessageBoxButtons.OK);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (txtLayanan.Text != null && txtLayanan.Text != "" || txtBiaya.Text != null && txtBiaya.Text != "")
+            {
+
+                Layanan layanan = new Layanan();
+                layanan.name = txtLayanan.Text;
+                layanan.price = txtBiaya.Text;
+                string success = layanancontrol.sendData(layanan);
+
+                dynamic json = JObject.Parse(success);
+                if (success != null)
+                {
+                    string responseContent = layanancontrol.getData();
+                    this.layanans = JArray.Parse(responseContent.ToString());
+                    this.setTable();
+                }
+                MessageBox.Show("Data Anda Berhasil Diupdate", "SELAMAT", MessageBoxButtons.OK);
+            }
+        }
     }
 }

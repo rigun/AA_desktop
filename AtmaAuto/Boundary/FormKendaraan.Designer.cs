@@ -41,6 +41,7 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.txtPencarian = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnHapus = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +68,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.btnHapus);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.txtMerkKendaraan);
@@ -81,7 +83,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DarkGray;
-            this.button2.Location = new System.Drawing.Point(160, 182);
+            this.button2.Location = new System.Drawing.Point(86, 168);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(68, 34);
             this.button2.TabIndex = 25;
@@ -92,12 +94,13 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.DarkGray;
-            this.button3.Location = new System.Drawing.Point(234, 182);
+            this.button3.Location = new System.Drawing.Point(160, 168);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(68, 34);
             this.button3.TabIndex = 26;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // txtMerkKendaraan
             // 
@@ -174,6 +177,17 @@
             this.label4.TabIndex = 41;
             this.label4.Text = "Pencarian";
             // 
+            // btnHapus
+            // 
+            this.btnHapus.BackColor = System.Drawing.Color.DarkGray;
+            this.btnHapus.Location = new System.Drawing.Point(234, 168);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.Size = new System.Drawing.Size(68, 34);
+            this.btnHapus.TabIndex = 43;
+            this.btnHapus.Text = "Hapus";
+            this.btnHapus.UseVisualStyleBackColor = false;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
+            // 
             // FormKendaraan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,5 +225,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.MaskedTextBox txtPencarian;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnHapus;
     }
 }

@@ -134,5 +134,45 @@ namespace AtmaAuto.Boundary
         {
             string sql = "select * from example where nama like '%" + txtPencarian.Text + "%'" + "order by no asc";
         }
+
+        private void btnHapus_Click(object sender, EventArgs e)
+        {
+            if (txtNamaKendaraan.Text != null && txtNamaKendaraan.Text != "" || txtMerkKendaraan.Text != null && txtMerkKendaraan.Text != "")
+            {
+                Kendaraan kendaraan = new Kendaraan();
+                kendaraan.merk = txtMerkKendaraan.Text;
+                kendaraan.type = txtNamaKendaraan.Text;
+                string success = kendaraanControl.deleteData(1);
+
+                dynamic json = JObject.Parse(success);
+                if (success != null)
+                {
+                    string responseContent = kendaraanControl.getData();
+                    this.kendaraans = JArray.Parse(responseContent.ToString());
+                    this.setTable();
+                }
+                MessageBox.Show("Data Anda Berhasil Dihapuskan", "SELAMAT", MessageBoxButtons.OK);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (txtNamaKendaraan.Text != null && txtNamaKendaraan.Text != "" || txtMerkKendaraan.Text != null && txtMerkKendaraan.Text != "")
+            {
+                Kendaraan kendaraan = new Kendaraan();
+                kendaraan.merk = txtMerkKendaraan.Text;
+                kendaraan.type = txtNamaKendaraan.Text;
+                string success = kendaraanControl.sendData(kendaraan);
+
+                dynamic json = JObject.Parse(success);
+                if (success != null)
+                {
+                    string responseContent = kendaraanControl.getData();
+                    this.kendaraans = JArray.Parse(responseContent.ToString());
+                    this.setTable();
+                }
+                MessageBox.Show("Data Anda Berhasil Diupdate", "SELAMAT", MessageBoxButtons.OK);
+            }
+        }
     }
 }
