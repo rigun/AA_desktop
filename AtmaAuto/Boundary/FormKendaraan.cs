@@ -33,14 +33,14 @@ namespace AtmaAuto.Boundary
             dt.Clear();
             dt.Columns.Add("Merk");
             dt.Columns.Add("Type");
-            dt.Columns.Add("Dibuat Pada");
+           
 
             foreach (dynamic kendaraan in this.kendaraans)
             {
                 DataRow row = dt.NewRow();
                 row["Merk"] = kendaraan.merk;
                 row["Type"] = kendaraan.type;
-                row["Dibuat Pada"] = kendaraan.created_at;
+               
                 dt.Rows.Add(row);
 
             }
@@ -124,6 +124,15 @@ namespace AtmaAuto.Boundary
                 MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             MessageBox.Show((e.RowIndex + 1) + "Row  " + (e.ColumnIndex + 1) + "  Column button clicked ");
+
+            int baris = int.Parse(e.RowIndex.ToString());
+            txtNamaKendaraan.Text = dataGridView1[1, baris].Value.ToString();
+            txtMerkKendaraan.Text = dataGridView1[2, baris].Value.ToString();
+        }
+
+        private void txtPencarian_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            string sql = "select * from example where nama like '%" + txtPencarian.Text + "%'" + "order by no asc";
         }
     }
 }

@@ -163,6 +163,7 @@
             this.txtPencarian.Name = "txtPencarian";
             this.txtPencarian.Size = new System.Drawing.Size(100, 20);
             this.txtPencarian.TabIndex = 42;
+            this.txtPencarian.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtPencarian_MaskInputRejected);
             // 
             // label4
             // 

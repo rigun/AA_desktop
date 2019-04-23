@@ -33,14 +33,14 @@ namespace AtmaAuto.Boundary
             dt.Clear();
             dt.Columns.Add("name");
             dt.Columns.Add("price");
-            dt.Columns.Add("Dibuat Pada");
+            
 
             foreach (dynamic layanan in this.layanans)
             {
                 DataRow row = dt.NewRow();
                 row["Name"] = layanan.name;
                 row["Price"] = layanan.price;
-                row["Dibuat pada"] = layanan.created_at;
+              
                 dt.Rows.Add(row);
             }
 
@@ -98,6 +98,11 @@ namespace AtmaAuto.Boundary
                 MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             MessageBox.Show((e.RowIndex + 1) + "Row  " + (e.ColumnIndex + 1) + "  Column button clicked ");
+
+            int baris = int.Parse(e.RowIndex.ToString());
+            txtLayanan.Text = dataGridView1[1, baris].Value.ToString();
+            txtBiaya.Text = dataGridView1[2, baris].Value.ToString();
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -118,6 +123,16 @@ namespace AtmaAuto.Boundary
                 f1.Show();
                 this.Hide();
             }
+        }
+
+        private void txtLayanan_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtPencarian_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            string sql = "select * from example where nama like '%" + txtPencarian.Text + "%'" + "order by no asc";
         }
     }
 }

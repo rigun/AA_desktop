@@ -13,6 +13,6 @@ namespace AtmaAuto.Entity
         public string address { get; set; }
         public string city { get; set; }
         public string salary { get; set; }
-        public string role_id { get; set; }
+        public string role { get; set; }
     }
 }

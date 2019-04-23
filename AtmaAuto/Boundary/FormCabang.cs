@@ -27,18 +27,19 @@ namespace AtmaAuto.Boundary
 
         CabangControl CC = new CabangControl();
 
+        
         public void setTable()
         {
             DataTable dt = new DataTable();
             dt.Clear();
             dt.Columns.Add("Name");
-            dt.Columns.Add("Dibuat Pada");
+         
 
             foreach (dynamic cabang in this.cabangs)
             {
                 DataRow row = dt.NewRow();
                 row["Name"] = cabang.name;
-                row["Dibuat Pada"] = cabang.created_at;
+                
                 dt.Rows.Add(row);
 
             }
@@ -54,6 +55,7 @@ namespace AtmaAuto.Boundary
                 btn.Name = "btn";
                 btn.UseColumnTextForButtonValue = true;
                 this.setTableStatus = 1;
+
             }
 
         }
@@ -199,6 +201,10 @@ namespace AtmaAuto.Boundary
                 MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             MessageBox.Show((e.RowIndex + 1) + "Row  " + (e.ColumnIndex + 1) + "  Column button clicked ");
+
+            int baris = int.Parse(e.RowIndex.ToString());
+            txtNamaCabang.Text = dataGridView1[1, baris].Value.ToString();
+            
         }
 
         private void FormCabang_Load(object sender, EventArgs e)
@@ -237,6 +243,19 @@ namespace AtmaAuto.Boundary
 
         private void txtNamaCabang_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
+
+        }
+
+        private void txtPencarian_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            string sql = "select * from example where nama like '%"+txtPencarian.Text+"%'"+"order by no asc";
+            
+
+        }
+
+        static void ShowDGV()
+        {
+            System.Data.DataTable dt = new DataTable();
 
         }
     }
