@@ -76,5 +76,10 @@ namespace AtmaAuto
         {
             this.Hide();
         }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

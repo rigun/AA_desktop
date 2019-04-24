@@ -31,6 +31,7 @@ namespace AtmaAuto.Boundary
         {
             DataTable dt = new DataTable();
             dt.Clear();
+            dt.Columns.Add("ID");
             dt.Columns.Add("Merk");
             dt.Columns.Add("Type");
            
@@ -38,6 +39,7 @@ namespace AtmaAuto.Boundary
             foreach (dynamic kendaraan in this.kendaraans)
             {
                 DataRow row = dt.NewRow();
+                row["ID"] = kendaraan.id;
                 row["Merk"] = kendaraan.merk;
                 row["Type"] = kendaraan.type;
                
@@ -104,6 +106,10 @@ namespace AtmaAuto.Boundary
                 }
                 MessageBox.Show("Data Anda Berhasil Ditambahkan", "SELAMAT", MessageBoxButtons.OK);
             }
+            else
+            {
+                MessageBox.Show("Silahkan Input Data", "PERINGATAN", MessageBoxButtons.OK);
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -147,7 +153,7 @@ namespace AtmaAuto.Boundary
                 dynamic json = JObject.Parse(success);
                 if (success != null)
                 {
-                    string responseContent = kendaraanControl.getData();
+                    string responseContent = kendaraanControl.deleteData(1);
                     this.kendaraans = JArray.Parse(responseContent.ToString());
                     this.setTable();
                 }

@@ -8,6 +8,7 @@ namespace AtmaAuto.Entity
 {
     class Pegawai
     {
+        public string branch { get; set;}
         public string name { get; set; }
         public string phoneNumber { get; set; }
         public string address { get; set; }

@@ -13,7 +13,7 @@ namespace AtmaAuto.Control
     class LayananControl
     {
         public string token { get; set; }
-        private string url = "http://api1.thekingcorp.org/service";
+        private string url = "http://10.53.15.204/service";
 
         public string getData()
         {

@@ -30,6 +30,7 @@ namespace AtmaAuto.Boundary
         {
             DataTable dt = new DataTable();
             dt.Clear();
+            dt.Columns.Add("Cabang");
             dt.Columns.Add("Pekerjaan");
             dt.Columns.Add("Nama");
             dt.Columns.Add("Nomor Telepon");
@@ -41,6 +42,7 @@ namespace AtmaAuto.Boundary
             foreach (dynamic pegawai in this.pegawais)
             {
                 DataRow row = dt.NewRow();
+                row["Cabang"] = pegawai.branch.name;
                 row["Pekerjaan"] = pegawai.detail.role.name;
                 row["Nama"] = pegawai.detail.name;
                 row["Nomor Telepon"] = pegawai.detail.phoneNumber;
@@ -79,9 +81,10 @@ namespace AtmaAuto.Boundary
 
         private void btnTambah_Click(object sender, EventArgs e)
         {
-            if (txtRole.Text != null && txtRole.Text != "" || txtName.Text != null && txtName.Text != "" || txtTelp.Text != null && txtTelp.Text != "" || txtAlamat.Text != null && txtAlamat.Text != "" || txtKota.Text != null && txtKota.Text != "" || txtSalary.Text != null && txtSalary.Text != ""  )
+            if (txtCabang.Text != null && txtCabang.Text != "" || txtRole.Text != null && txtRole.Text != "" || txtName.Text != null && txtName.Text != "" || txtTelp.Text != null && txtTelp.Text != "" || txtAlamat.Text != null && txtAlamat.Text != "" || txtKota.Text != null && txtKota.Text != "" || txtSalary.Text != null && txtSalary.Text != "")
             {
                 Pegawai pegawai = new Pegawai();
+                pegawai.branch = txtCabang.Text;
                 pegawai.role = txtRole.Text;
                 pegawai.name = txtName.Text;
                 pegawai.phoneNumber = txtTelp.Text;
@@ -99,6 +102,10 @@ namespace AtmaAuto.Boundary
                     this.setTable();
                 }
                 MessageBox.Show("Data Anda Berhasil Ditambahkan", "SELAMAT", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Silahkan Input Data", "PERINGATAN", MessageBoxButtons.OK);
             }
         }
 

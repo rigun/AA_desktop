@@ -78,6 +78,10 @@ namespace AtmaAuto.Boundary
                 }
                 MessageBox.Show("Data Anda Berhasil Ditambahkan", "SELAMAT", MessageBoxButtons.OK);
             }
+            else
+            {
+                MessageBox.Show("Silahkan Input Data", "PERINGATAN", MessageBoxButtons.OK);
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -32,12 +32,14 @@ namespace AtmaAuto.Boundary
         {
             DataTable dt = new DataTable();
             dt.Clear();
+            dt.Columns.Add("ID");
             dt.Columns.Add("Name");
          
 
             foreach (dynamic cabang in this.cabangs)
             {
                 DataRow row = dt.NewRow();
+                row["ID"] = cabang.id;
                 row["Name"] = cabang.name;
                 
                 dt.Rows.Add(row);
@@ -203,7 +205,7 @@ namespace AtmaAuto.Boundary
             MessageBox.Show((e.RowIndex + 1) + "Row  " + (e.ColumnIndex + 1) + "  Column button clicked ");
 
             int baris = int.Parse(e.RowIndex.ToString());
-            txtNamaCabang.Text = dataGridView1[1, baris].Value.ToString();
+            txtNamaCabang.Text = dataGridView1[2, baris].Value.ToString();
             
         }
 
@@ -228,6 +230,10 @@ namespace AtmaAuto.Boundary
                 }
                 MessageBox.Show("Data Anda Berhasil Ditambahkan", "SELAMAT", MessageBoxButtons.OK);
 
+            }
+            else
+            {
+                MessageBox.Show("Silahkan Input Data", "PERINGATAN", MessageBoxButtons.OK);
             }
         }
 
@@ -279,15 +285,15 @@ namespace AtmaAuto.Boundary
             {
                 Cabang cabang = new Cabang();
                 cabang.name = txtNamaCabang.Text;
-                string success = cabangControl.deleteData(1);
+                string success = cabangControl.deleteData(cabang.id);
                 dynamic json = JObject.Parse(success);
                 if (success != null)
                 {
-                    string responseContent = cabangControl.getData();
-                    this.cabangs = JArray.Parse(responseContent.ToString());
+                     cabangControl.deleteData(cabang.id);
+         
                     this.setTable();
                 }
-                MessageBox.Show("Data Anda Berhasil DiHapuskan", "SELAMAT", MessageBoxButtons.OK);
+                MessageBox.Show("Data Anda Berhasil Dihapuskan", "SELAMAT", MessageBoxButtons.OK);
 
             }
         }
