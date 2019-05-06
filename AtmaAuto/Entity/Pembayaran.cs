@@ -15,7 +15,7 @@ namespace AtmaAuto.Entity
         public int cashier_id { get; set; }
         public string transaction { get; set; }
         public int id_transaction { get; set; }
-        public string transactionnumber { get; set; }
+        public string transactionNumber { get; set; }
         public string totalservices { get; set; }
         public string  totalspareparts{ get; set; }
         public string  totalcost{ get; set; }

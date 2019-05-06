@@ -32,7 +32,7 @@ namespace AtmaAuto.Boundary
         {
             DataTable dt = new DataTable();
             dt.Clear();
-            dt.Columns.Add("ID Cabang");
+            dt.Columns.Add("Nama Cabang");
             dt.Columns.Add("ID Transaction");
             dt.Columns.Add("Transaction Number");
             dt.Columns.Add("Total Services");
@@ -49,9 +49,9 @@ namespace AtmaAuto.Boundary
             {
                 DataRow row = dt.NewRow();
                 
-                row["ID Cabang"] = pembayaran.id;
-                
-                row["Transaction Number"] = pembayaran.transaction.transactionNumber;
+                row["Nama Cabang"] = pembayaran.branch.name;
+                row["ID Transaction"] = pembayaran.id;
+                row["Transaction Number"] = pembayaran.transactionNumber;
                 row["Total Services"] = pembayaran.totalServices;
                 row["Total Spareparts"] = pembayaran.totalSpareparts;
                 row["Total Cost"] = pembayaran.totalCost;
