@@ -13,7 +13,7 @@ namespace AtmaAuto.Control
     class LayananControl
     {
         public string token { get; set; }
-        private string url = "http://10.53.15.204/service";
+        private string url = "http://api1.thekingcorp.org/service";
 
         public string getData()
         {
@@ -35,6 +35,17 @@ namespace AtmaAuto.Control
             var payload = JsonConvert.SerializeObject(layanan);
 
             Uri u = new Uri(this.url);
+            HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");
+            var t = Task.Run(() => PostURI(u, c, this.token));
+            t.Wait();
+            return t.Result;
+        }
+
+        public string updateData(Layanan layanan, int id)
+        {
+            var payload = JsonConvert.SerializeObject(layanan);
+            string deleteUrl = String.Concat(this.url, "/", id);
+            Uri u = new Uri(deleteUrl);
             HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");
             var t = Task.Run(() => PostURI(u, c, this.token));
             t.Wait();

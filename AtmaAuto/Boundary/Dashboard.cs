@@ -82,9 +82,7 @@ namespace AtmaAuto.Boundary
 
         private void btnLaporan_Click(object sender, EventArgs e)
         {
-            FormLaporan fla = new FormLaporan();
-            fla.Show();
-            this.Hide();
+            
         }
 
         private void btnPegawai_Click(object sender, EventArgs e)
@@ -187,9 +185,7 @@ namespace AtmaAuto.Boundary
 
         private void btnLaporan_Click_1(object sender, EventArgs e)
         {
-            FormLaporan folap = new FormLaporan();
-            folap.Show();
-            this.Hide();
+
         }
     }
 }

@@ -33,6 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtCabang = new System.Windows.Forms.MaskedTextBox();
             this.btnHapus = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtKota = new System.Windows.Forms.MaskedTextBox();
@@ -50,8 +52,6 @@
             this.txtName = new System.Windows.Forms.MaskedTextBox();
             this.txtPencarian = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtCabang = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,7 @@
             this.btnBack.TabIndex = 46;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnLogout
             // 
@@ -86,6 +87,7 @@
             this.label1.Size = new System.Drawing.Size(246, 24);
             this.label1.TabIndex = 44;
             this.label1.Text = "Pengelolahan Data Pegawai\r\n";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataGridView1
             // 
@@ -120,6 +122,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(317, 572);
             this.panel1.TabIndex = 42;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(26, 24);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(86, 20);
+            this.label9.TabIndex = 51;
+            this.label9.Text = "ID Cabang";
+            // 
+            // txtCabang
+            // 
+            this.txtCabang.Location = new System.Drawing.Point(27, 47);
+            this.txtCabang.Name = "txtCabang";
+            this.txtCabang.Size = new System.Drawing.Size(266, 20);
+            this.txtCabang.TabIndex = 50;
             // 
             // btnHapus
             // 
@@ -130,6 +151,7 @@
             this.btnHapus.TabIndex = 49;
             this.btnHapus.Text = "Hapus";
             this.btnHapus.UseVisualStyleBackColor = false;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // label8
             // 
@@ -252,6 +274,7 @@
             this.btnUpdate.TabIndex = 26;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtName
             // 
@@ -277,24 +300,7 @@
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 47;
             this.label3.Text = "Pencarian";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(26, 24);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 20);
-            this.label9.TabIndex = 51;
-            this.label9.Text = "ID Cabang";
-            // 
-            // txtCabang
-            // 
-            this.txtCabang.Location = new System.Drawing.Point(27, 47);
-            this.txtCabang.Name = "txtCabang";
-            this.txtCabang.Size = new System.Drawing.Size(266, 20);
-            this.txtCabang.TabIndex = 50;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // FormPegawai
             // 

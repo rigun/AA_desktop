@@ -33,6 +33,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtIDLayanan = new System.Windows.Forms.MaskedTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnHapus = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btnTambah = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -41,7 +44,6 @@
             this.txtLayanan = new System.Windows.Forms.MaskedTextBox();
             this.txtPencarian = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnHapus = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -90,6 +92,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.txtIDLayanan);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.btnHapus);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btnTambah);
@@ -101,6 +105,35 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(317, 470);
             this.panel1.TabIndex = 34;
+            // 
+            // txtIDLayanan
+            // 
+            this.txtIDLayanan.Location = new System.Drawing.Point(31, 59);
+            this.txtIDLayanan.Name = "txtIDLayanan";
+            this.txtIDLayanan.Size = new System.Drawing.Size(266, 20);
+            this.txtIDLayanan.TabIndex = 31;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(27, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 20);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "ID Layanan";
+            // 
+            // btnHapus
+            // 
+            this.btnHapus.BackColor = System.Drawing.Color.DarkGray;
+            this.btnHapus.Location = new System.Drawing.Point(229, 213);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.Size = new System.Drawing.Size(68, 34);
+            this.btnHapus.TabIndex = 29;
+            this.btnHapus.Text = "Hapus";
+            this.btnHapus.UseVisualStyleBackColor = false;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // label4
             // 
@@ -178,17 +211,6 @@
             this.label3.TabIndex = 42;
             this.label3.Text = "Pencarian";
             // 
-            // btnHapus
-            // 
-            this.btnHapus.BackColor = System.Drawing.Color.DarkGray;
-            this.btnHapus.Location = new System.Drawing.Point(229, 213);
-            this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(68, 34);
-            this.btnHapus.TabIndex = 29;
-            this.btnHapus.Text = "Hapus";
-            this.btnHapus.UseVisualStyleBackColor = false;
-            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
-            // 
             // FormLayanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,5 +250,7 @@
         private System.Windows.Forms.MaskedTextBox txtPencarian;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnHapus;
+        private System.Windows.Forms.MaskedTextBox txtIDLayanan;
+        private System.Windows.Forms.Label label5;
     }
 }

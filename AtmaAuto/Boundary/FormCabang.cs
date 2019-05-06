@@ -53,7 +53,7 @@ namespace AtmaAuto.Boundary
                 DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
                 dataGridView1.Columns.Add(btn);
                 btn.HeaderText = "Pengaturan";
-                btn.Text = "Hapus";
+                btn.Text = "Pilih";
                 btn.Name = "btn";
                 btn.UseColumnTextForButtonValue = true;
                 this.setTableStatus = 1;
@@ -159,9 +159,7 @@ namespace AtmaAuto.Boundary
 
         private void btnLaporan_Click(object sender, EventArgs e)
         {
-            FormLaporan folap = new FormLaporan();
-            folap.Show();
-            this.Hide();
+            
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -202,10 +200,12 @@ namespace AtmaAuto.Boundary
             {
                 MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            MessageBox.Show((e.RowIndex + 1) + "Row  " + (e.ColumnIndex + 1) + "  Column button clicked ");
+            
 
             int baris = int.Parse(e.RowIndex.ToString());
+            txtID.Text = dataGridView1[1, baris].Value.ToString();
             txtNamaCabang.Text = dataGridView1[2, baris].Value.ToString();
+
             
         }
 
@@ -243,15 +243,17 @@ namespace AtmaAuto.Boundary
             {
                 Cabang cabang = new Cabang();
                 cabang.name = txtNamaCabang.Text;
-                string success = cabangControl.sendData(cabang);
+                int inputId = Int32.Parse(txtID.Text);
+                string success = cabangControl.updateData(cabang,inputId);
                 dynamic json = JObject.Parse(success);
                 if (success != null)
                 {
                     string responseContent = cabangControl.getData();
                     this.cabangs = JArray.Parse(responseContent.ToString());
                     this.setTable();
+                    MessageBox.Show("Data Anda Berhasil Diupdate", "SELAMAT", MessageBoxButtons.OK);
                 }
-                MessageBox.Show("Data Anda Berhasil Diupdate", "SELAMAT", MessageBoxButtons.OK);
+                MessageBox.Show("Data Anda Tidak Berhasil Diupdate", "PERINGATAN", MessageBoxButtons.OK);
 
             }
         }
@@ -285,17 +287,33 @@ namespace AtmaAuto.Boundary
             {
                 Cabang cabang = new Cabang();
                 cabang.name = txtNamaCabang.Text;
-                string success = cabangControl.deleteData(cabang.id);
+                int inputId = Int32.Parse(txtID.Text);
+                string success = cabangControl.deleteData(inputId);
                 dynamic json = JObject.Parse(success);
                 if (success != null)
                 {
                      cabangControl.deleteData(cabang.id);
          
                     this.setTable();
+                    MessageBox.Show("Data Anda Berhasil Dihapuskan", "SELAMAT", MessageBoxButtons.OK);
                 }
-                MessageBox.Show("Data Anda Berhasil Dihapuskan", "SELAMAT", MessageBoxButtons.OK);
+                else
+                {
+                    MessageBox.Show("Data Tidak Berhasil", "PERHATIAN!", MessageBoxButtons.OK);
+                }
+                
 
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtID_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            
         }
     }
 }

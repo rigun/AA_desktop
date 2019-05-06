@@ -13,7 +13,7 @@ namespace AtmaAuto.Control
     class KendaraanControl
     {
         public string token { get; set; }
-        private string url = "http://10.53.15.204/vehicle";
+        private string url = "http://api1.thekingcorp.org/vehicle";
         public string getData()
         {
             var t = Task.Run(() => GetURI(new Uri(this.url), this.token));
@@ -37,6 +37,18 @@ namespace AtmaAuto.Control
             t.Wait();
             return t.Result;
         }
+
+        public string updateData(Kendaraan kendaraan, int id)
+        {
+            var payload = JsonConvert.SerializeObject(kendaraan);
+            string deleteUrl = String.Concat(this.url, "/", id);
+            Uri u = new Uri(deleteUrl);
+            HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");
+            var t = Task.Run(() => PostURI(u, c, this.token));
+            t.Wait();
+            return t.Result;
+        }
+
         static async Task<string> PostURI(Uri u, HttpContent c, string token)
         {
             var response = string.Empty;

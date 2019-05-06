@@ -31,6 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtID = new System.Windows.Forms.MaskedTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnHapus = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.txtMerkKendaraan = new System.Windows.Forms.MaskedTextBox();
@@ -41,7 +44,6 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.txtPencarian = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnHapus = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +70,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.txtID);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.btnHapus);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button3);
@@ -79,6 +83,35 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(317, 470);
             this.panel1.TabIndex = 32;
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(143, 73);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(159, 20);
+            this.txtID.TabIndex = 45;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(4, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 20);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "ID Kendaraan";
+            // 
+            // btnHapus
+            // 
+            this.btnHapus.BackColor = System.Drawing.Color.DarkGray;
+            this.btnHapus.Location = new System.Drawing.Point(234, 168);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.Size = new System.Drawing.Size(68, 34);
+            this.btnHapus.TabIndex = 43;
+            this.btnHapus.Text = "Hapus";
+            this.btnHapus.UseVisualStyleBackColor = false;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // button2
             // 
@@ -114,7 +147,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(4, 140);
+            this.label2.Location = new System.Drawing.Point(3, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 20);
             this.label2.TabIndex = 3;
@@ -132,7 +165,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(4, 104);
+            this.label3.Location = new System.Drawing.Point(3, 140);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 40);
             this.label3.TabIndex = 1;
@@ -177,17 +210,6 @@
             this.label4.TabIndex = 41;
             this.label4.Text = "Pencarian";
             // 
-            // btnHapus
-            // 
-            this.btnHapus.BackColor = System.Drawing.Color.DarkGray;
-            this.btnHapus.Location = new System.Drawing.Point(234, 168);
-            this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(68, 34);
-            this.btnHapus.TabIndex = 43;
-            this.btnHapus.Text = "Hapus";
-            this.btnHapus.UseVisualStyleBackColor = false;
-            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
-            // 
             // FormKendaraan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,5 +248,7 @@
         private System.Windows.Forms.MaskedTextBox txtPencarian;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnHapus;
+        private System.Windows.Forms.MaskedTextBox txtID;
+        private System.Windows.Forms.Label label5;
     }
 }

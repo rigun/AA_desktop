@@ -31,13 +31,15 @@ namespace AtmaAuto.Boundary
         {
             DataTable dt = new DataTable();
             dt.Clear();
-            dt.Columns.Add("name");
-            dt.Columns.Add("price");
+            dt.Columns.Add("ID");
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Price");
             
 
             foreach (dynamic layanan in this.layanans)
             {
                 DataRow row = dt.NewRow();
+                row["ID"] = layanan.id;
                 row["Name"] = layanan.name;
                 row["Price"] = layanan.price;
               
@@ -50,7 +52,7 @@ namespace AtmaAuto.Boundary
                 DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
                 dataGridView1.Columns.Add(btn);
                 btn.HeaderText = "Pengaturan";
-                btn.Text = "Hapus";
+                btn.Text = "Pilih";
                 btn.Name = "btn";
                 btn.UseColumnTextForButtonValue = true;
                 this.setTableStatus = 1;
@@ -101,7 +103,7 @@ namespace AtmaAuto.Boundary
             {
                 MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            MessageBox.Show((e.RowIndex + 1) + "Row  " + (e.ColumnIndex + 1) + "  Column button clicked ");
+
 
             int baris = int.Parse(e.RowIndex.ToString());
             txtLayanan.Text = dataGridView1[1, baris].Value.ToString();
@@ -109,7 +111,7 @@ namespace AtmaAuto.Boundary
 
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+            private void btnBack_Click(object sender, EventArgs e)
         {
             Dashboard dsh = new Dashboard();
             dsh.Show();

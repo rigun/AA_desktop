@@ -54,7 +54,7 @@ namespace AtmaAuto.Boundary
                 DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
                 dataGridView1.Columns.Add(btn);
                 btn.HeaderText = "Pengaturan";
-                btn.Text = "Hapus";
+                btn.Text = "Pilih";
                 btn.Name = "btn";
                 btn.UseColumnTextForButtonValue = true;
                 this.setTableStatus = 1;
@@ -132,8 +132,9 @@ namespace AtmaAuto.Boundary
             MessageBox.Show((e.RowIndex + 1) + "Row  " + (e.ColumnIndex + 1) + "  Column button clicked ");
 
             int baris = int.Parse(e.RowIndex.ToString());
-            txtNamaKendaraan.Text = dataGridView1[1, baris].Value.ToString();
-            txtMerkKendaraan.Text = dataGridView1[2, baris].Value.ToString();
+            txtID.Text = dataGridView1[1, baris].Value.ToString();
+            txtNamaKendaraan.Text = dataGridView1[2, baris].Value.ToString();
+            txtMerkKendaraan.Text = dataGridView1[3, baris].Value.ToString();
         }
 
         private void txtPencarian_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -148,16 +149,16 @@ namespace AtmaAuto.Boundary
                 Kendaraan kendaraan = new Kendaraan();
                 kendaraan.merk = txtMerkKendaraan.Text;
                 kendaraan.type = txtNamaKendaraan.Text;
-                string success = kendaraanControl.deleteData(1);
-
+                int inputId = Int32.Parse(txtID.Text);
+                string success = kendaraanControl.deleteData(inputId);
                 dynamic json = JObject.Parse(success);
                 if (success != null)
                 {
-                    string responseContent = kendaraanControl.deleteData(1);
-                    this.kendaraans = JArray.Parse(responseContent.ToString());
+                    kendaraanControl.deleteData(kendaraan.id);
                     this.setTable();
+                    MessageBox.Show("Data Anda Berhasil Dihapuskan", "SELAMAT", MessageBoxButtons.OK);
                 }
-                MessageBox.Show("Data Anda Berhasil Dihapuskan", "SELAMAT", MessageBoxButtons.OK);
+                MessageBox.Show("Data Anda Tidak Berhasil Dihapuskan", "SELAMAT", MessageBoxButtons.OK);
             }
         }
 
@@ -168,7 +169,8 @@ namespace AtmaAuto.Boundary
                 Kendaraan kendaraan = new Kendaraan();
                 kendaraan.merk = txtMerkKendaraan.Text;
                 kendaraan.type = txtNamaKendaraan.Text;
-                string success = kendaraanControl.sendData(kendaraan);
+                int inputId = Int32.Parse(txtID.Text);
+                string success = kendaraanControl.updateData(kendaraan,inputId);
 
                 dynamic json = JObject.Parse(success);
                 if (success != null)

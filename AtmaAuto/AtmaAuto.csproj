@@ -67,12 +67,6 @@
     <Compile Include="Boundary\FormKendaraan.Designer.cs">
       <DependentUpon>FormKendaraan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Boundary\FormLaporan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Boundary\FormLaporan.Designer.cs">
-      <DependentUpon>FormLaporan.cs</DependentUpon>
-    </Compile>
     <Compile Include="Boundary\FormLayanan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,13 +114,17 @@
     <Compile Include="Control\LayananControl.cs" />
     <Compile Include="Control\LoginControl.cs" />
     <Compile Include="Control\PegawaiControl.cs" />
+    <Compile Include="Control\PembayaranControl.cs" />
     <Compile Include="Control\SIAAControl.cs" />
+    <Compile Include="Control\SparepartControl.cs" />
     <Compile Include="Entity\Cabang.cs" />
     <Compile Include="Entity\FileHandling.cs" />
     <Compile Include="Entity\Kendaraan.cs" />
     <Compile Include="Entity\Layanan.cs" />
     <Compile Include="Entity\Login.cs" />
     <Compile Include="Entity\Pegawai.cs" />
+    <Compile Include="Entity\Pembayaran.cs" />
+    <Compile Include="Entity\Sparepart.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestClient.cs" />
@@ -148,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Boundary\FormPegawai.resx">
       <DependentUpon>FormPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boundary\FormPembayaran.resx">
+      <DependentUpon>FormPembayaran.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Boundary\FormSparepart.resx">
       <DependentUpon>FormSparepart.cs</DependentUpon>

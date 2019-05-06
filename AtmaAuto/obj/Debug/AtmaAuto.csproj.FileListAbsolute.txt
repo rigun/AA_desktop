@@ -62,3 +62,4 @@ F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.Fo
 G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormKendaraan.resources
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormLayanan.resources
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormPegawai.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormPembayaran.resources

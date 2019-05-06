@@ -30,6 +30,7 @@
         {
             this.btnLogout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHapus = new System.Windows.Forms.Button();
             this.txtNamaCabang = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnTambah = new System.Windows.Forms.Button();
@@ -39,7 +40,8 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPencarian = new System.Windows.Forms.MaskedTextBox();
-            this.btnHapus = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +60,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.txtID);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btnHapus);
             this.panel1.Controls.Add(this.txtNamaCabang);
             this.panel1.Controls.Add(this.label3);
@@ -67,6 +71,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(248, 470);
             this.panel1.TabIndex = 14;
+            // 
+            // btnHapus
+            // 
+            this.btnHapus.BackColor = System.Drawing.Color.DarkGray;
+            this.btnHapus.Location = new System.Drawing.Point(168, 153);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.Size = new System.Drawing.Size(68, 34);
+            this.btnHapus.TabIndex = 24;
+            this.btnHapus.Text = "Hapus";
+            this.btnHapus.UseVisualStyleBackColor = false;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click_1);
             // 
             // txtNamaCabang
             // 
@@ -86,6 +101,7 @@
             this.label3.Size = new System.Drawing.Size(111, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Nama Cabang";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnTambah
             // 
@@ -156,16 +172,24 @@
             this.txtPencarian.TabIndex = 27;
             this.txtPencarian.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtPencarian_MaskInputRejected);
             // 
-            // btnHapus
+            // label4
             // 
-            this.btnHapus.BackColor = System.Drawing.Color.DarkGray;
-            this.btnHapus.Location = new System.Drawing.Point(168, 153);
-            this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(68, 34);
-            this.btnHapus.TabIndex = 24;
-            this.btnHapus.Text = "Hapus";
-            this.btnHapus.UseVisualStyleBackColor = false;
-            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click_1);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(26, 61);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 20);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "ID Cabang";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(30, 84);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(204, 20);
+            this.txtID.TabIndex = 26;
+            this.txtID.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtID_MaskInputRejected);
             // 
             // FormCabang
             // 
@@ -205,5 +229,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox txtPencarian;
         private System.Windows.Forms.Button btnHapus;
+        private System.Windows.Forms.MaskedTextBox txtID;
+        private System.Windows.Forms.Label label4;
     }
 }
