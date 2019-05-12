@@ -185,7 +185,10 @@ namespace AtmaAuto.Boundary
 
         private void btnLaporan_Click_1(object sender, EventArgs e)
         {
-
+            FormLaporan formLaporan = new FormLaporan();
+            
+            formLaporan.Show();
+            this.Hide();
         }
     }
 }

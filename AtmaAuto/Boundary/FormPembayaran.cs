@@ -32,35 +32,37 @@ namespace AtmaAuto.Boundary
         {
             DataTable dt = new DataTable();
             dt.Clear();
+            dt.Columns.Add("Status");
             dt.Columns.Add("Nama Cabang");
-            dt.Columns.Add("ID Transaction");
-            dt.Columns.Add("Transaction Number");
+            dt.Columns.Add("ID Transaksi");
+            dt.Columns.Add("Nomor Transaksi");
+            dt.Columns.Add("Nama Customer");
             dt.Columns.Add("Total Services");
             dt.Columns.Add("Total Spareparts");
-            dt.Columns.Add("Total Cost");
-            dt.Columns.Add("Payment");
+            dt.Columns.Add("Total Transaksi");
+            dt.Columns.Add("Pembayaran");
             dt.Columns.Add("Diskon");
-            dt.Columns.Add("CS ID");
-            dt.Columns.Add("Customer ID");
-            dt.Columns.Add("Cashier ID");
-
+            dt.Columns.Add("Nama CS");
+            dt.Columns.Add("Nama Cashier");
+            
 
             foreach (dynamic pembayaran in this.pembayarans)
             {
                 DataRow row = dt.NewRow();
-                
+
+                row["Status"] = pembayaran.status ;
                 row["Nama Cabang"] = pembayaran.branch.name;
-                row["ID Transaction"] = pembayaran.id;
-                row["Transaction Number"] = pembayaran.transactionNumber;
+                row["ID Transaksi"] = pembayaran.id;
+                row["Nomor Transaksi"] = pembayaran.transactionNumber;
+                row["Nama Customer"] = pembayaran.customer.name;
                 row["Total Services"] = pembayaran.totalServices;
                 row["Total Spareparts"] = pembayaran.totalSpareparts;
-                row["Total Cost"] = pembayaran.totalCost;
-                row["Payment"] = pembayaran.payment;
+                row["Total Transaksi"] = pembayaran.totalCost;
+                row["Pembayaran"] = pembayaran.payment;
                 row["Diskon"] = pembayaran.diskon;
-                row["CS ID"] = pembayaran.cs_id;
-                row["Customer ID"] = pembayaran.customer_id;
-                row["Cashier ID"] = pembayaran.cashier_id;
-
+                row["Nama CS"] = pembayaran.cs.name;
+                row["Nama Cashier"] = pembayaran.cashier.name;
+            
                 dt.Rows.Add(row);
 
             }
@@ -71,6 +73,7 @@ namespace AtmaAuto.Boundary
             {
                 DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
                 dataGridView1.Columns.Add(btn);
+                
                 btn.HeaderText = "Pengaturan";
                 btn.Text = "Pilih";
                 btn.Name = "btn";
@@ -82,7 +85,13 @@ namespace AtmaAuto.Boundary
         }
 
 
+        public void setStatus()
+        {
+                        
+                Console.WriteLine("Hello World");
+            
 
+        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string responseContent = pbc.getData();
@@ -100,7 +109,61 @@ namespace AtmaAuto.Boundary
             {
                 MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            int baris = int.Parse(e.RowIndex.ToString());
+            txtPilih.Text = dataGridView1[3, baris].Value.ToString();
+        }
 
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Ingin Keluar Dari Aplikasi Ini ???", "Konfirmasi",
+           MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                FileHandling wr = new FileHandling();
+                wr.WriteData("");
+                Form1 f1 = new Form1();
+                f1.Show();
+                this.Hide();
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Dashboard dsh = new Dashboard();
+            dsh.Show();
+            this.Hide();
+        }
+
+     
+        private void btnPilih_Click(object sender, EventArgs e)
+        {
+            if (txtPilih.Text != null && txtPilih.Text != "" )
+            {
+              
+
+                MessageBox.Show("Data Anda Berhasil Ditambahkan", "SELAMAT", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Silahkan Input Data", "PERINGATAN", MessageBoxButtons.OK);
+            }
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtPilih.Text != null && txtPilih.Text != "")
+            {
+                NotaLunas ntln = new NotaLunas();
+
+              
+             
+
+                MessageBox.Show("Data Anda Berhasil Ditambahkan", "SELAMAT", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Silahkan Input Data", "PERINGATAN", MessageBoxButtons.OK);
+            }
         }
     }
 }

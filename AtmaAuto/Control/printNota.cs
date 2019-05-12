@@ -8,14 +8,13 @@ using System.Text;
 using AtmaAuto.Entity;
 using System.Net.Http.Headers;
 
+
 namespace AtmaAuto.Control
 {
-
-    class SparepartControl
+    class printNota
     {
         public string token { get; set; }
-        private string url = "https://api1.thekingcorp.org/sparepart";
-
+        private string url = "https://api1.thekingcorp.org/notaLunas";
         public string getData()
         {
             var t = Task.Run(() => GetURI(new Uri(this.url), this.token));
@@ -31,9 +30,9 @@ namespace AtmaAuto.Control
             return t.Result;
         }
 
-        public string sendData(Sparepart sparepart)
+        public string sendData(NotaLunas notaLunas)
         {
-            var payload = JsonConvert.SerializeObject(sparepart);
+            var payload = JsonConvert.SerializeObject(notaLunas);
 
             Uri u = new Uri(this.url);
             HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");
@@ -41,10 +40,9 @@ namespace AtmaAuto.Control
             t.Wait();
             return t.Result;
         }
-
-        public string updateData(Sparepart sparepart, int id)
+        public string updateData(NotaLunas notaLunas, int id)
         {
-            var payload = JsonConvert.SerializeObject(sparepart);
+            var payload = JsonConvert.SerializeObject(notaLunas);
             string deleteUrl = String.Concat(this.url, "/", id);
             Uri u = new Uri(deleteUrl);
             HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");
@@ -68,11 +66,12 @@ namespace AtmaAuto.Control
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
-                    response = "Sparepart gagal dimasukkan";
+                    response = "Pegawai gagal dimasukkan";
                 }
             }
             return response;
         }
+
         static async Task<string> GetURI(Uri u, string token)
         {
             var response = string.Empty;
@@ -87,7 +86,7 @@ namespace AtmaAuto.Control
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
-                    response = "Cabang gagal dimasukkan";
+                    response = "Pegawai gagal dimasukkan";
                 }
             }
             return response;
@@ -107,10 +106,12 @@ namespace AtmaAuto.Control
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
-                    response = "Cabang gagal dihapus";
+                    response = "Pegawai gagal dihapus";
                 }
             }
             return response;
         }
     }
 }
+
+

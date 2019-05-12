@@ -10,11 +10,10 @@ using System.Net.Http.Headers;
 
 namespace AtmaAuto.Control
 {
-
-    class SparepartControl
+    class LapSpLarisControl
     {
         public string token { get; set; }
-        private string url = "https://api1.thekingcorp.org/sparepart";
+        private string url = "https://api1.thekingcorp.org/files/report/sparepartTerlaris/09-2019.pdf";
 
         public string getData()
         {
@@ -31,9 +30,9 @@ namespace AtmaAuto.Control
             return t.Result;
         }
 
-        public string sendData(Sparepart sparepart)
+        public string sendData(Cabang cabang)
         {
-            var payload = JsonConvert.SerializeObject(sparepart);
+            var payload = JsonConvert.SerializeObject(cabang);
 
             Uri u = new Uri(this.url);
             HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");
@@ -42,9 +41,9 @@ namespace AtmaAuto.Control
             return t.Result;
         }
 
-        public string updateData(Sparepart sparepart, int id)
+        public string updateData(Cabang cabang, int id)
         {
-            var payload = JsonConvert.SerializeObject(sparepart);
+            var payload = JsonConvert.SerializeObject(cabang);
             string deleteUrl = String.Concat(this.url, "/", id);
             Uri u = new Uri(deleteUrl);
             HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");
@@ -68,7 +67,7 @@ namespace AtmaAuto.Control
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
-                    response = "Sparepart gagal dimasukkan";
+                    response = "Cabang gagal dimasukkan";
                 }
             }
             return response;

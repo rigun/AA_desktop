@@ -13,7 +13,7 @@ namespace AtmaAuto.Control
     class PegawaiControl
     {
         public string token { get; set; }
-        private string url = "http://api1.thekingcorp.org/employee";
+        private string url = "https://api1.thekingcorp.org/employee";
         public string getData()
         {
             var t = Task.Run(() => GetURI(new Uri(this.url), this.token));

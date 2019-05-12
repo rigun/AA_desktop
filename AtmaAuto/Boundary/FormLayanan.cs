@@ -31,17 +31,17 @@ namespace AtmaAuto.Boundary
         {
             DataTable dt = new DataTable();
             dt.Clear();
-            dt.Columns.Add("ID");
-            dt.Columns.Add("Name");
-            dt.Columns.Add("Price");
+            dt.Columns.Add("ID Layanan");
+            dt.Columns.Add("Nama Layanan");
+            dt.Columns.Add("Harga");
             
 
             foreach (dynamic layanan in this.layanans)
             {
                 DataRow row = dt.NewRow();
-                row["ID"] = layanan.id;
-                row["Name"] = layanan.name;
-                row["Price"] = layanan.price;
+                row["ID Layanan"] = layanan.id;
+                row["Nama Layanan"] = layanan.name;
+                row["Harga"] = layanan.price;
               
                 dt.Rows.Add(row);
             }
@@ -104,10 +104,10 @@ namespace AtmaAuto.Boundary
                 MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-
             int baris = int.Parse(e.RowIndex.ToString());
-            txtLayanan.Text = dataGridView1[1, baris].Value.ToString();
-            txtBiaya.Text = dataGridView1[2, baris].Value.ToString();
+            txtID.Text = dataGridView1[1, baris].Value.ToString();
+            txtLayanan.Text = dataGridView1[2, baris].Value.ToString();
+            txtBiaya.Text = dataGridView1[3, baris].Value.ToString();
 
         }
 

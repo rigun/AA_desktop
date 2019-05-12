@@ -31,17 +31,17 @@ namespace AtmaAuto.Boundary
         {
             DataTable dt = new DataTable();
             dt.Clear();
-            dt.Columns.Add("ID");
-            dt.Columns.Add("Merk");
-            dt.Columns.Add("Type");
+            dt.Columns.Add("ID Kendaraan");
+            dt.Columns.Add("Merk Kendaraan");
+            dt.Columns.Add("Type Kendaraan");
            
 
             foreach (dynamic kendaraan in this.kendaraans)
             {
                 DataRow row = dt.NewRow();
-                row["ID"] = kendaraan.id;
-                row["Merk"] = kendaraan.merk;
-                row["Type"] = kendaraan.type;
+                row["ID Kendaraan"] = kendaraan.id;
+                row["Merk Kendaraan"] = kendaraan.merk;
+                row["Type Kendaraan"] = kendaraan.type;
                
                 dt.Rows.Add(row);
 
@@ -129,8 +129,7 @@ namespace AtmaAuto.Boundary
             {
                 MessageBox.Show("Silahkan Masukkan Data Tepat!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            MessageBox.Show((e.RowIndex + 1) + "Row  " + (e.ColumnIndex + 1) + "  Column button clicked ");
-
+            
             int baris = int.Parse(e.RowIndex.ToString());
             txtID.Text = dataGridView1[1, baris].Value.ToString();
             txtNamaKendaraan.Text = dataGridView1[2, baris].Value.ToString();

@@ -31,7 +31,7 @@ namespace AtmaAuto.Control
 
             var payload = JsonConvert.SerializeObject(userData);
 
-            Uri u = new Uri("http://api1.thekingcorp.org/auth/login");
+            Uri u = new Uri("https://api1.thekingcorp.org/auth/login");
 
             HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");
             var t = Task.Run(() => PostURI(u, c));
