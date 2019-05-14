@@ -50,7 +50,7 @@ namespace AtmaAuto.Boundary
             {
                 DataRow row = dt.NewRow();
 
-                row["Status"] = pembayaran.status ;
+                row["Status"] = "Belum diBayarkan" ;
                 row["Nama Cabang"] = pembayaran.branch.name;
                 row["ID Transaksi"] = pembayaran.id;
                 row["Nomor Transaksi"] = pembayaran.transactionNumber;
@@ -138,8 +138,9 @@ namespace AtmaAuto.Boundary
         {
             if (txtPilih.Text != null && txtPilih.Text != "" )
             {
-              
 
+                string success = pbc.getData();
+                dynamic json = JObject.Parse(success);
                 MessageBox.Show("Data Anda Berhasil Ditambahkan", "SELAMAT", MessageBoxButtons.OK);
             }
             else
@@ -151,11 +152,9 @@ namespace AtmaAuto.Boundary
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtPilih.Text != null && txtPilih.Text != "")
+            if (txtPilih.Text != null && txtPilih.Text != "" || )
             {
-                NotaLunas ntln = new NotaLunas();
-
-              
+               
              
 
                 MessageBox.Show("Data Anda Berhasil Ditambahkan", "SELAMAT", MessageBoxButtons.OK);
