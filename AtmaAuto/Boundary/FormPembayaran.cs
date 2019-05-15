@@ -87,10 +87,7 @@ namespace AtmaAuto.Boundary
 
         public void setStatus()
         {
-                        
                 Console.WriteLine("Hello World");
-            
-
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -152,7 +149,7 @@ namespace AtmaAuto.Boundary
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtPilih.Text != null && txtPilih.Text != "" || )
+            if (txtPilih.Text != null && txtPilih.Text != "" )
             {
                
              
