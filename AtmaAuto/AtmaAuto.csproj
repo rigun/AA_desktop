@@ -77,6 +77,12 @@
     <Compile Include="Boundary\FormCabang.Designer.cs">
       <DependentUpon>FormCabang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Boundary\FormCetakNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boundary\FormCetakNota.Designer.cs">
+      <DependentUpon>FormCetakNota.cs</DependentUpon>
+    </Compile>
     <Compile Include="Boundary\FormKendaraan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,18 @@
     </Compile>
     <Compile Include="Boundary\FormLaporan.Designer.cs">
       <DependentUpon>FormLaporan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boundary\FormLaporanPendapatanBulanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boundary\FormLaporanPendapatanBulanan.Designer.cs">
+      <DependentUpon>FormLaporanPendapatanBulanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boundary\FormLaporanPendapatanTahun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boundary\FormLaporanPendapatanTahun.Designer.cs">
+      <DependentUpon>FormLaporanPendapatanTahun.cs</DependentUpon>
     </Compile>
     <Compile Include="Boundary\FormLayanan.cs">
       <SubType>Form</SubType>
@@ -118,6 +136,24 @@
     </Compile>
     <Compile Include="Boundary\FormPembayaran.Designer.cs">
       <DependentUpon>FormPembayaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boundary\FormPengeluaranBulanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boundary\FormPengeluaranBulanan.Designer.cs">
+      <DependentUpon>FormPengeluaranBulanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boundary\FormPenjualanJasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boundary\FormPenjualanJasa.Designer.cs">
+      <DependentUpon>FormPenjualanJasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boundary\FormSisaStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boundary\FormSisaStok.Designer.cs">
+      <DependentUpon>FormSisaStok.cs</DependentUpon>
     </Compile>
     <Compile Include="Boundary\FormSparepart.cs">
       <SubType>Form</SubType>
@@ -171,6 +207,12 @@
     <EmbeddedResource Include="Boundary\FormLaporan.resx">
       <DependentUpon>FormLaporan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Boundary\FormLaporanPendapatanBulanan.resx">
+      <DependentUpon>FormLaporanPendapatanBulanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boundary\FormLaporanPendapatanTahun.resx">
+      <DependentUpon>FormLaporanPendapatanTahun.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Boundary\FormLayanan.resx">
       <DependentUpon>FormLayanan.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +224,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Boundary\FormPembayaran.resx">
       <DependentUpon>FormPembayaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boundary\FormPengeluaranBulanan.resx">
+      <DependentUpon>FormPengeluaranBulanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boundary\FormPenjualanJasa.resx">
+      <DependentUpon>FormPenjualanJasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boundary\FormSisaStok.resx">
+      <DependentUpon>FormSisaStok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Boundary\FormSparepart.resx">
       <DependentUpon>FormSparepart.cs</DependentUpon>

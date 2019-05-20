@@ -13,7 +13,7 @@ namespace AtmaAuto.Control
     class LapSpLarisControl
     {
         public string token { get; set; }
-        private string url = "https://api1.thekingcorp.org/files/report/sparepartTerlaris/09-2019.pdf";
+        private string url = "http://10.53.1.192/files/report/sparepartTerlaris/09-2019.pdf";
 
         public string getData()
         {

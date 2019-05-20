@@ -13,7 +13,7 @@ namespace AtmaAuto.Control
     class PembayaranControl
     {
         public string token { get; set; }
-        private string url = "https://api1.thekingcorp.org/transaction";
+        private string url = "http://api1.thekingcorp.org/transaction";
 
         public string getData()
         {

@@ -83,3 +83,98 @@ F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\bin\Debug\CrystalDecisions.Win
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\bin\Debug\FlashControlV71.dll
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\bin\Debug\ShockwaveFlashObjects.dll
 F:\AA ATMAJAYA SEMESTER 6\P3L\AA_desktop\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormLaporan.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\AtmaAuto.exe.config
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\AtmaAuto.exe
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\AtmaAuto.pdb
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\CrystalDecisions.ReportSource.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\CrystalDecisions.Shared.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\CrystalDecisions.Windows.Forms.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\FlashControlV71.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\Newtonsoft.Json.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\System.Net.Http.Formatting.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\ShockwaveFlashObjects.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\stdole.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\Newtonsoft.Json.pdb
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\Newtonsoft.Json.xml
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\bin\Debug\System.Net.Http.Formatting.xml
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.csprojAssemblyReference.cache
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.Boundary.Dashboard.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormCabang.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormKendaraan.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormLaporan.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormLayanan.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.Form1.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormPegawai.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormPembayaran.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormSparepart.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormSupplier.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.Properties.Resources.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.csproj.GenerateResource.cache
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.csproj.CoreCompileInputs.cache
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.csproj.CopyComplete
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.exe
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.pdb
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormLaporanPendapatanBulanan.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\New folder\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormLaporanPendapatanTahun.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\AtmaAuto.exe.config
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\AtmaAuto.exe
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\AtmaAuto.pdb
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\CrystalDecisions.ReportSource.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\CrystalDecisions.Shared.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\CrystalDecisions.Windows.Forms.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\FlashControlV71.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\Newtonsoft.Json.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\System.Net.Http.Formatting.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\ShockwaveFlashObjects.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\stdole.dll
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\Newtonsoft.Json.pdb
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\Newtonsoft.Json.xml
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\bin\Debug\System.Net.Http.Formatting.xml
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.csprojAssemblyReference.cache
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.Boundary.Dashboard.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormCabang.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormKendaraan.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormLaporan.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormLaporanPendapatanBulanan.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormLaporanPendapatanTahun.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormLayanan.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.Form1.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormPegawai.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormPembayaran.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormSparepart.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormSupplier.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.Properties.Resources.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.csproj.GenerateResource.cache
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.csproj.CoreCompileInputs.cache
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.csproj.CopyComplete
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.exe
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.pdb
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormSisaStok.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormPengeluaranBulanan.resources
+F:\AA ATMAJAYA SEMESTER 6\P3L\FIX\AtmaAuto\obj\Debug\AtmaAuto.Boundary.FormPenjualanJasa.resources

@@ -91,6 +91,7 @@
             this.LapPenTahun.TabIndex = 30;
             this.LapPenTahun.Text = "Pendapatan Tahunan";
             this.LapPenTahun.UseVisualStyleBackColor = false;
+            this.LapPenTahun.Click += new System.EventHandler(this.LapPenTahun_Click);
             // 
             // LapPengeluaranBul
             // 
@@ -101,6 +102,7 @@
             this.LapPengeluaranBul.TabIndex = 31;
             this.LapPengeluaranBul.Text = "Pengeluaran Bulanan";
             this.LapPengeluaranBul.UseVisualStyleBackColor = false;
+            this.LapPengeluaranBul.Click += new System.EventHandler(this.LapPengeluaranBul_Click);
             // 
             // LapJualJasa
             // 
@@ -111,6 +113,7 @@
             this.LapJualJasa.TabIndex = 32;
             this.LapJualJasa.Text = "Penjualan Jasa";
             this.LapJualJasa.UseVisualStyleBackColor = false;
+            this.LapJualJasa.Click += new System.EventHandler(this.LapJualJasa_Click);
             // 
             // LapSisaStok
             // 

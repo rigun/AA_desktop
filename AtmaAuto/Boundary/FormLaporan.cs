@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.IO;
+using System.Reflection;
 
 namespace AtmaAuto.Boundary
 {
@@ -20,7 +21,8 @@ namespace AtmaAuto.Boundary
     {
 
         public string token { get; set; }
-        private string url = "http://127.0.0.1:8000/sparepartTerlaris/report/2019";
+
+        private string url = "https://api1.thekingcorp.org/pendapatantahunan";
 
         public FormLaporan()
         {
@@ -32,9 +34,9 @@ namespace AtmaAuto.Boundary
 
         private void btnLapSpLaris_Click(object sender, EventArgs e)
         {
-            string data = this.getData();
-            Console.WriteLine(data.ToString());
-            System.Diagnostics.Process.Start(@"G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\somePathHere.pdf");
+            FormLaporanPendapatanTahun lppt = new FormLaporanPendapatanTahun();
+            lppt.Show();
+            this.Hide();
         }
        
         public string getData()
@@ -55,7 +57,7 @@ namespace AtmaAuto.Boundary
                     HttpResponseMessage result = await client.GetAsync(u);
                     result.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment");
                     result.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
-                    using (var file = System.IO.File.Create(@"G:\RekapanTugas\Kuliah\_Semester6\P3L\Project\AA_Desktop\somePathHere.pdf"))
+                    using (var file = System.IO.File.Create(@"F:\LapPedapatanTahunan.pdf"))
                     { // create a new file to write to
                         var contentStream = await result.Content.ReadAsStreamAsync(); // get the actual content stream
                         await contentStream.CopyToAsync(file); // copy that stream to the file stream
@@ -92,24 +94,46 @@ namespace AtmaAuto.Boundary
 
         private void LapPenBul_Click(object sender, EventArgs e)
         {
-            WebClient Client = new WebClient();
-            Client.DownloadFile("https://api1.thekingcorp.org/files/report/sparepartTerlaris/09-2019.pdf", @"D:\P3L\Laporan.pdf");
+            FormLaporanPendapatanBulanan lppb = new FormLaporanPendapatanBulanan();
+            lppb.Show();
+            this.Hide();
+            
+
         }
 
         private void LapSisaStok_Click(object sender, EventArgs e)
         {
-            var t = new Task(DownloadPageAsync);
-            t.Start();
-
-            Console.WriteLine("Downloading Page");
-            Console.ReadLine();
-
+            FormSisaStok fss = new FormSisaStok();
+            fss.Show();
+            this.Hide();
         }
 
         public static async void DownloadPageAsync()
         {
             var page = "https://api1.thekingcorp.org/files/report/sparepartTerlaris/09-2019.pdf";
            
+        }
+
+        private void LapPenTahun_Click(object sender, EventArgs e)
+        {
+            string data = this.getData();
+            Console.WriteLine(data.ToString());
+            System.Diagnostics.Process.Start(@"F:\LapPedapatanTahunan.pdf");
+            MessageBox.Show("Data Laporan Sparepart Terlaris Berhasil Di Download", "SELAMAT", MessageBoxButtons.OK);
+        }
+
+        private void LapPengeluaranBul_Click(object sender, EventArgs e)
+        {
+            FormPengeluaranBulanan fpb = new FormPengeluaranBulanan();
+            fpb.Show();
+            this.Hide();
+        }
+
+        private void LapJualJasa_Click(object sender, EventArgs e)
+        {
+            FormPenjualanJasa fpj = new FormPenjualanJasa();
+            fpj.Show();
+            this.Hide();
         }
     }
 }
